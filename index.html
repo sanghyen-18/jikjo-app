@@ -642,6 +642,60 @@
   .ai-step.active .st-ic{background:transparent;color:var(--primary-text);}
   .disclaimer{font-size:12px;color:var(--muted);text-align:center;margin:16px 20px 0;line-height:1.6;}
 
+  /* growth report */
+  .gr-hero .week-chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:var(--primary-text);background:var(--primary-tint);padding:4px 10px;border-radius:10px;}
+  .gr-score{display:flex;align-items:baseline;gap:6px;margin:14px 0 2px;}
+  .gr-num{font-size:44px;font-weight:800;letter-spacing:-1px;font-variant-numeric:tabular-nums;}
+  .gr-unit{font-size:15px;font-weight:700;color:var(--muted);}
+  .gr-areas{display:flex;flex-direction:column;gap:10px;margin-top:16px;}
+  .gr-area{display:flex;align-items:center;gap:10px;}
+  .ga-l{width:92px;font-size:13px;font-weight:700;display:flex;flex-direction:column;flex-shrink:0;}
+  .ga-l small{font-size:11px;color:var(--muted);font-weight:600;}
+  .ga-v{width:30px;text-align:right;font-weight:800;font-size:13.5px;font-variant-numeric:tabular-nums;}
+  .gm-chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;}
+  .gm-chips::-webkit-scrollbar{display:none;}
+  .gm-chip{white-space:nowrap;height:32px;padding:0 12px;border-radius:16px;border:1.5px solid var(--border);background:var(--card);font-size:12.5px;font-weight:700;color:var(--muted);}
+  .gm-chip.on{border-color:var(--primary);background:var(--primary-tint);color:var(--primary-text);}
+  .gr-trend{display:flex;align-items:flex-end;gap:10px;height:170px;margin-top:14px;}
+  .gt-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:4px;}
+  .gt-col i{display:block;width:100%;max-width:40px;border-radius:10px 10px 4px 4px;background:var(--primary-tint2);transform-origin:bottom;animation:growY .6s var(--ease) both;}
+  .gt-col.live i{background:var(--primary);}
+  .gt-v{font-size:12px;font-weight:800;font-variant-numeric:tabular-nums;}
+  .gt-l{font-size:12px;font-weight:700;margin-top:2px;}
+  .gt-col.live .gt-l{color:var(--primary-text);}
+  .gt-r{font-size:10.5px;color:var(--muted);}
+  .gt-msg{font-size:13.5px;font-weight:800;margin:12px 0 0;}
+  .gr-group{padding-bottom:8px;}
+  .gr-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);}
+  .gr-row:last-child{border-bottom:none;}
+  .gr-name{font-size:14px;font-weight:700;}
+  .gr-how{font-size:12px;color:var(--muted);margin-top:2px;}
+  .gr-val{font-size:13.5px;font-weight:800;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .lv-legend{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--muted);font-weight:600;}
+  .lv-legend span{display:flex;align-items:center;gap:5px;}
+  .lv-legend i{width:9px;height:9px;border-radius:50%;display:inline-block;}
+  .lv-list{display:flex;flex-direction:column;gap:10px;margin-top:14px;}
+  .lv-item{background:var(--gray);border-radius:12px;padding:12px;}
+  .lv-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;}
+  .lv-text{margin:6px 0 0;font-size:13.5px;line-height:1.55;}
+  .lv-chip{font-size:11px;font-weight:800;padding:3px 8px;border-radius:8px;}
+  .lv-chip.lv0{background:var(--card);color:var(--gray-text);}
+  .lv-chip.lv1{background:var(--blue-tint);color:var(--auto-text);}
+  .lv-chip.lv2{background:var(--warn-bg);color:var(--warn-text);}
+  .lv-chip.lv3{background:var(--primary-tint);color:var(--primary-text);}
+  .pp-legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);font-weight:600;margin-bottom:12px;}
+  .pp-legend span{display:flex;align-items:center;gap:5px;}
+  .pp-legend i{width:9px;height:9px;border-radius:3px;display:inline-block;}
+  .pp-row{display:flex;align-items:center;gap:10px;padding:8px 0;}
+  .pp-body{flex:1;min-width:0;}
+  .pp-top{display:flex;justify-content:space-between;gap:8px;font-size:12.5px;font-weight:700;margin-bottom:5px;}
+  .pp-num{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--muted);}
+  .pp-num b{color:var(--text);}
+  .pp-bars{display:flex;flex-direction:column;gap:4px;}
+  .pp-bars .score-track{height:6px;}
+  .csv-grid{display:flex;flex-direction:column;gap:8px;margin-top:14px;}
+  .csv-grid .outline-btn{margin-top:0;border-style:solid;border-color:var(--border);}
+
   .toast{position:fixed;left:50%;bottom:110px;transform:translateX(-50%);background:rgba(30,40,30,0.92);color:#fff;padding:11px 20px;border-radius:20px;font-size:13.5px;font-weight:600;z-index:200;white-space:nowrap;animation:toastIn .3s var(--ease) both;}
   .toast.leaving{animation:toastOut .22s ease both;}
   :root[data-theme="dark"] .toast{background:rgba(228,236,228,.95);color:#10180F;}
@@ -760,16 +814,25 @@ const state = {
   receipt:{image:null, sample:0, scanStep:0},
   guideTab:'ledger',
   ai:{loading:false, step:0, report:null, sig:'', label:'7월 20일 (월) 오전 9:00 도착', challenge:false},
+  studentId:'학생-001',
+  growthMetric:'index',
+  reflections:[
+    {dateKey:'07-13', mood:'good', diary:'지하철비는 학원 가는 데 꼭 필요한 돈이었다.'},
+    {dateKey:'07-14', mood:'good', diary:'문구류는 수행평가 준비물이라 사길 잘했다. 뿌듯하다.'},
+    {dateKey:'07-16', mood:'regretish', diary:'스티커팩은 예뻐서 샀는데 사실 비슷한 게 집에 있었다. 다음엔 집에 있는지 먼저 확인해야지.'},
+    {dateKey:'07-17', mood:'regret', diary:'게임 아이템은 친구들 따라 샀다. 후회된다.'},
+    {dateKey:'07-18', mood:'normal', diary:'과자 맛있었다.'}
+  ],
   transactions:[
     {id:1,dateKey:'07-19',name:'학교 앞 분식',cat:'food',sub:'식사',amount:-4500,cls:'need',src:'manual'},
     {id:2,dateKey:'07-19',name:'버블티',cat:'cafe',sub:'간식',amount:-5500,cls:null,src:'manual'},
-    {id:3,dateKey:'07-18',name:'편의점 과자',cat:'snack',sub:'간식',amount:-2800,cls:'impulse',src:'manual'},
-    {id:4,dateKey:'07-18',name:'버스',cat:'transport',sub:'교통',amount:-1400,cls:'need',src:'manual'},
-    {id:5,dateKey:'07-17',name:'모바일 게임 아이템',cat:'game',sub:'게임',amount:-11000,cls:'impulse',src:'manual'},
-    {id:6,dateKey:'07-17',name:'점심 - 김밥천국',cat:'food',sub:'식사',amount:-6000,cls:'need',src:'manual'},
-    {id:7,dateKey:'07-16',name:'스티커팩',cat:'beauty',sub:'미용',amount:-3300,cls:'impulse',src:'manual'},
+    {id:3,dateKey:'07-18',name:'편의점 과자',cat:'snack',sub:'간식',amount:-2800,cls:'impulse',src:'manual',before:{checks:[false,true,false],memo:''}},
+    {id:4,dateKey:'07-18',name:'버스',cat:'transport',sub:'교통',amount:-1400,cls:'need',src:'manual',before:{checks:[true,true,true],memo:''}},
+    {id:5,dateKey:'07-17',name:'모바일 게임 아이템',cat:'game',sub:'게임',amount:-11000,cls:'impulse',src:'manual',before:{checks:[false,false,false],memo:'친구들이 다 사서'}},
+    {id:6,dateKey:'07-17',name:'점심 - 김밥천국',cat:'food',sub:'식사',amount:-6000,cls:'need',src:'manual',before:{checks:[true,true,false],memo:''}},
+    {id:7,dateKey:'07-16',name:'스티커팩',cat:'beauty',sub:'미용',amount:-3300,cls:'impulse',src:'manual',before:{checks:[true,false,false],memo:'예뻐서 꼭 갖고 싶었어요'}},
     {id:8,dateKey:'07-15',name:'아이스크림',cat:'snack',sub:'간식',amount:-2000,cls:null,src:'manual'},
-    {id:9,dateKey:'07-14',name:'문구류',cat:'shopping',sub:'학용품',amount:-7800,cls:'need',src:'manual'},
+    {id:9,dateKey:'07-14',name:'문구류',cat:'shopping',sub:'학용품',amount:-7800,cls:'need',src:'manual',before:{checks:[true,true,true],memo:'수행평가 준비물'}},
     {id:10,dateKey:'07-13',name:'지하철',cat:'transport',sub:'교통',amount:-1400,cls:'need',src:'manual'}
   ]
 };
@@ -1033,6 +1096,7 @@ function renderHome(){
     '<span class="ai-badge" style="width:44px;height:44px">'+icon('sparkles',20)+'</span>'+
     '<div class="type-info"><p class="k1">AI 소비 코치 · 이번 주 리포트</p><p class="k2" style="font-size:15.5px">'+r.solutions[0].title+'</p></div>'+
     '<span class="chevron">'+icon('chevron-right',20)+'</span></button>'+
+    growthCard()+
   '<div class="card">'+
     '<div class="card-row"><p class="sec-title">오늘의 소비</p><p class="card-title" style="font-weight:500">7월 19일</p></div>'+
     '<div>'+(today.length ? today.map(t=>'<div class="today-item pop-in" data-key="h'+t.id+'">'+txnIcon(t)+
@@ -1181,7 +1245,16 @@ function renderStage(){
     '<p class="stage-sub" style="margin-top:8px">미션을 완료해 다음 스테이지로 올라가요</p></div>'+
   '<div class="card"><p class="sec-title" style="margin-bottom:6px">개인 미션</p>'+
     '<div class="'+dirCls+'" data-key="m'+idx+'">'+stage.missions.map(m=>'<div class="mission-row"><div class="mission-check '+(m.done?'done':'todo')+'">'+(m.done?icon('check',15):'')+'</div><div class="mission-text '+(m.done?'done':'')+'">'+m.text+'</div>'+(m.done?'':'<span class="mission-tag">진행 중</span>')+'</div>').join('')+'</div>'+
-  '</div>';
+  '</div>'+
+  growthCard();
+}
+function growthCard(){
+  const weeks = allWeeks();
+  const cur = weeks[weeks.length-1], d = cur.index - weeks[weeks.length-2].index;
+  return '<button class="card card-btn" data-action="open-growth">'+
+    '<span class="ai-badge" style="width:44px;height:44px">'+icon('trend',20)+'</span>'+
+    '<div class="type-info"><p class="k1">나의 성장 리포트</p><p class="k2" style="font-size:15.5px">직조 지수 '+cur.index+'점 · 지난주보다 '+(d>=0?'+':'−')+Math.abs(d)+'</p></div>'+
+    '<span class="chevron">'+icon('chevron-right',20)+'</span></button>';
 }
 
 /* ---------------- DIAGNOSIS ---------------- */
@@ -1464,6 +1537,237 @@ function renderAI(){
   '</div>';
 }
 
+/* ---------------- GROWTH REPORT ---------------- */
+const MOOD_LABEL = {good:'만족', normal:'보통', regretish:'아쉬움', regret:'후회'};
+const RUBRIC_LABEL = ['사실만 적음','감정을 적음','이유를 돌아봄','다음 행동을 정함'];
+const PRE_DIAGNOSIS = {label:'사전 진단 · 7월 1일', sums:{aura:14, joy:22, hyunjae:19, melon:16, jay:12}};
+const EXAMPLE_WEEKS = [
+  {label:'1주차', range:'6/22–6/28', rec:.57, done:.29, org:.60, before:.10, depth:1.0, memo:.00, diaryRate:.50, rubric:.8, plan:.50, impulse:.52, regret:.60},
+  {label:'2주차', range:'6/29–7/5', rec:.71, done:.43, org:.72, before:.25, depth:1.4, memo:.20, diaryRate:.67, rubric:1.3, plan:.58, impulse:.47, regret:.50},
+  {label:'3주차', range:'7/6–7/12', rec:.86, done:.57, org:.80, before:.38, depth:1.8, memo:.33, diaryRate:.75, rubric:1.7, plan:.67, impulse:.42, regret:.40}
+];
+function rubricLevel(text){
+  const t = (text||'').replace(/\s+/g,' ').trim();
+  if(!t) return null;
+  if(/다음엔|다음에|앞으로|해야지|하겠|할 거|줄여|줄이|챙겨|확인해야|기다려/.test(t)) return 3;
+  if(/왜|때문|따라|사실|필요 없|필요했|필요한|충동|원래|싸서|할인|준비물|이라서|이라 /.test(t)) return 2;
+  if(/맛있|좋았|기뻤|행복|아쉽|아쉬|후회|속상|뿌듯|만족|기분|잘했/.test(t)) return 1;
+  return 0;
+}
+function plannedAs(t){ return t.before ? (t.before.checks[0] ? 'need' : 'impulse') : null; }
+function currentMetrics(){
+  const list = state.transactions;
+  const n = list.length || 1;
+  const recDays = new Set(list.map(t=>t.dateKey));
+  const refl = state.reflections;
+  const doneDays = refl.filter(r=>recDays.has(r.dateKey)).length;
+  const withBefore = list.filter(t=>t.before);
+  const depth = withBefore.length ? withBefore.reduce((s,t)=>s+t.before.checks.filter(Boolean).length,0)/withBefore.length : 0;
+  const memo = withBefore.length ? withBefore.filter(t=>t.before.memo).length/withBefore.length : 0;
+  const diaries = refl.filter(r=>r.diary && r.diary.trim());
+  const levels = diaries.map(r=>rubricLevel(r.diary));
+  const planned = list.filter(t=>t.before && t.cls);
+  const cls = classifyTotals(list);
+  const total = totalSpend(list) || 1;
+  return {
+    label:'4주차', range:'7/13–7/19', live:true,
+    rec: recDays.size/7,
+    done: recDays.size ? doneDays/recDays.size : 0,
+    org: 1 - list.filter(t=>!t.cls || t.cat==='unset').length/n,
+    before: withBefore.length/n,
+    depth, memo,
+    diaryRate: refl.length ? diaries.length/refl.length : 0,
+    rubric: levels.length ? levels.reduce((a,b)=>a+b,0)/levels.length : 0,
+    levels,
+    plan: planned.length ? planned.filter(t=>plannedAs(t)===t.cls).length/planned.length : 0,
+    plannedCount: planned.length,
+    impulse: cls.impulse/total,
+    regret: refl.length ? refl.filter(r=>r.mood==='regret'||r.mood==='regretish').length/refl.length : 0,
+    reflCount: refl.length, recCount: recDays.size, txnCount: list.length, beforeCount: withBefore.length
+  };
+}
+function areaScores(m){
+  return {
+    use: (m.rec + m.done + m.org)/3,
+    before: m.before*0.6 + (m.depth/3)*0.4,
+    after: m.diaryRate*0.5 + (m.rubric/3)*0.5,
+    structure: m.plan*0.6 + (1-m.impulse)*0.4
+  };
+}
+function partialIndex(m){ const a = areaScores(m); return (20*a.use + 25*a.before + 25*a.after + 20*a.structure)/90; }
+function diagnosisGrowth(){
+  if(!state.diagnosis) return null;
+  const post = computeQuizResult().sums, pre = PRE_DIAGNOSIS.sums;
+  return clampNum(0.5 + ((post.jay-pre.jay) - (post.hyunjae-pre.hyunjae))/20, 0, 1);
+}
+function clampNum(v, lo, hi){ return Math.max(lo, Math.min(hi, v)); }
+function allWeeks(){
+  const weeks = EXAMPLE_WEEKS.map(w=>Object.assign({}, w)).concat([currentMetrics()]);
+  weeks.forEach((w,i)=>{
+    const prev = i ? partialIndex(weeks[i-1]) : partialIndex(w);
+    let change = clampNum(0.5 + (partialIndex(w)-prev)*2.5, 0, 1);
+    if(w.live){ const d = diagnosisGrowth(); if(d!==null) change = (change + d)/2; }
+    w.change = change;
+    const a = areaScores(w);
+    w.areas = {use:a.use, before:a.before, after:a.after, structure:a.structure, change:change};
+    w.index = Math.round(20*a.use + 25*a.before + 25*a.after + 20*a.structure + 10*change);
+  });
+  return weeks;
+}
+const GROWTH_METRICS = [
+  {k:'index', label:'직조 지수', unit:'점', max:100},
+  {k:'done', label:'돌아보기 완료율', unit:'%', max:1},
+  {k:'before', label:'사기 전 작성률', unit:'%', max:1},
+  {k:'rubric', label:'성찰 수준', unit:'/3', max:3},
+  {k:'plan', label:'계획 일치도', unit:'%', max:1},
+  {k:'impulse', label:'충동 소비 비율', unit:'%', max:1, lower:true}
+];
+function fmtMetric(v, unit){
+  if(unit==='%') return Math.round(v*100)+'%';
+  if(unit==='/3') return v.toFixed(1)+'/3';
+  return Math.round(v)+'점';
+}
+function pct(v){ return Math.round(v*100); }
+function renderGrowth(){
+  const weeks = allWeeks();
+  const cur = weeks[weeks.length-1], prev = weeks[weeks.length-2];
+  const d = cur.index - prev.index;
+  const areaDefs = [['use','활용도',20],['before','사기 전 생각',25],['after','산 뒤 성찰',25],['structure','소비 구조',20],['change','변화',10]];
+  const gm = GROWTH_METRICS.find(g=>g.k===state.growthMetric) || GROWTH_METRICS[0];
+  const vals = weeks.map(w=>w[gm.k]);
+  const first = vals[0], last = vals[vals.length-1];
+  const diffTxt = gm.unit==='%' ? Math.abs(pct(last)-pct(first))+'%p' : (gm.unit==='/3' ? Math.abs(last-first).toFixed(1)+'점' : Math.abs(Math.round(last-first))+'점');
+  const better = gm.lower ? last<first : last>first;
+  const trendMsg = last===first ? '1주차와 같아요' : '1주차보다 '+diffTxt+' '+(gm.lower?(last<first?'줄었어요':'늘었어요'):(last>first?'올랐어요':'내려갔어요'));
+
+  const rows = [
+    ['활용도', [
+      ['기록 일수', '기록한 날 ÷ 7일', cur.recCount+'/7일 · '+pct(cur.rec)+'%'],
+      ['돌아보기 완료율', '돌아보기 한 날 ÷ 기록한 날', pct(cur.done)+'%'],
+      ['정리율', '용도·필요/충동을 고른 비율', pct(cur.org)+'%']]],
+    ['사기 전 생각', [
+      ['작성률', '사기 전 체크가 있는 거래 비율', cur.beforeCount+'/'+cur.txnCount+'건 · '+pct(cur.before)+'%'],
+      ['생각의 깊이', '체크 개수 평균 (0~3)', cur.depth.toFixed(1)+'개'],
+      ['메모 작성률', '사기 전 메모를 남긴 비율', pct(cur.memo)+'%']]],
+    ['산 뒤 성찰', [
+      ['일지 작성률', '일지를 쓴 날 ÷ 돌아보기 한 날', pct(cur.diaryRate)+'%'],
+      ['성찰 수준', '일지 루브릭 평균 (0~3)', cur.rubric.toFixed(1)+'점'],
+      ['후회 비율', '후회·아쉬움을 고른 비율', pct(cur.regret)+'%']]],
+    ['소비 구조', [
+      ['계획 일치도', '사기 전 판단 = 산 뒤 판단 비율', cur.plannedCount ? pct(cur.plan)+'% ('+cur.plannedCount+'건 기준)' : '데이터 없음'],
+      ['충동 소비 비율', '충동 금액 ÷ 전체 금액', pct(cur.impulse)+'%'],
+      ['챌린지', 'AI 솔루션 챌린지 참여', state.ai.challenge?'도전 중':'시작 안 함']]]
+  ];
+
+  const lvCounts = [0,0,0,0]; cur.levels.forEach(l=>lvCounts[l]++);
+  const lvTotal = cur.levels.length || 1;
+  const lvColors = ['var(--gray-seg)','var(--c-game)','var(--c-snack)','var(--primary)'];
+  const recent = state.reflections.filter(r=>r.diary && r.diary.trim()).slice().sort((a,b)=>a.dateKey<b.dateKey?1:-1).slice(0,3);
+
+  const post = state.diagnosis ? computeQuizResult().sums : null;
+  const maxG = {joy:30, melon:25, aura:20, hyunjae:25, jay:25};
+
+  return '<div class="flow">'+appBar('나의 성장 리포트')+
+    '<div class="card gr-hero" style="margin-top:6px">'+
+      '<div class="card-row"><span class="week-chip">'+icon('trend',14)+'4주차 · 7/13–7/19</span><span class="muted-sm">학생 ID '+esc(state.studentId)+'</span></div>'+
+      '<div class="gr-score"><span class="gr-num">'+cur.index+'</span><span class="gr-unit">/ 100</span></div>'+
+      '<p class="muted-sm" style="font-weight:700;color:'+(d>=0?'var(--primary-text)':'var(--danger-text)')+'">직조 지수 · 지난주보다 '+Math.abs(d)+'점 '+(d>=0?'올랐어요':'내려갔어요')+'</p>'+
+      '<div class="gr-areas">'+areaDefs.map((a,i)=>'<div class="gr-area"><span class="ga-l">'+a[1]+'<small>'+a[2]+'%</small></span><div class="score-track"><div class="score-fill" style="width:'+pct(cur.areas[a[0]])+'%;background:var(--primary);animation-delay:'+(i*60)+'ms"></div></div><span class="ga-v">'+pct(cur.areas[a[0]])+'</span></div>').join('')+'</div>'+
+    '</div>'+
+
+    '<div class="section-label">주차별 변화</div>'+
+    '<div class="card" style="margin-top:0">'+
+      '<div class="gm-chips">'+GROWTH_METRICS.map(g=>'<button class="gm-chip '+(g.k===gm.k?'on':'')+'" data-action="growth-metric" data-arg="'+g.k+'" aria-pressed="'+(g.k===gm.k)+'">'+g.label+'</button>').join('')+'</div>'+
+      '<div class="gr-trend" data-key="tr-'+gm.k+'">'+weeks.map((w,i)=>{
+        const v = w[gm.k]; const h = Math.max(4, Math.round(v/gm.max*96));
+        return '<div class="gt-col'+(w.live?' live':'')+'"><span class="gt-v">'+fmtMetric(v, gm.unit)+'</span><i style="height:'+h+'px;animation-delay:'+(i*60)+'ms"></i><span class="gt-l">'+w.label+'</span><span class="gt-r">'+w.range+'</span></div>';
+      }).join('')+'</div>'+
+      '<p class="gt-msg" style="color:'+(last===first?'var(--muted)':(better?'var(--primary-text)':'var(--danger-text)'))+'">'+gm.label+' · '+trendMsg+'</p>'+
+      '<p class="muted-sm" style="margin-top:6px">1~3주차는 예시 데이터예요. 4주차는 지금 앱에 기록된 내용으로 계산해요.</p>'+
+    '</div>'+
+
+    '<div class="section-label">지표 상세 · 이번 주</div>'+
+    rows.map(g=>'<div class="card gr-group" style="margin-top:0"><p class="sec-title" style="font-size:14.5px">'+g[0]+'</p>'+g[1].map(r=>'<div class="gr-row"><div><div class="gr-name">'+r[0]+'</div><div class="gr-how">'+r[1]+'</div></div><div class="gr-val">'+r[2]+'</div></div>').join('')+'</div>').join('')+
+
+    '<div class="section-label">성찰 일지 수준</div>'+
+    '<div class="card" style="margin-top:0">'+
+      '<div class="segbar" style="margin-top:0">'+lvCounts.map((c,i)=>'<div style="width:'+(c/lvTotal*100)+'%;background:'+lvColors[i]+'"></div>').join('')+'</div>'+
+      '<div class="lv-legend">'+RUBRIC_LABEL.map((l,i)=>'<span><i style="background:'+lvColors[i]+'"></i>'+i+'단계 '+l+' · '+lvCounts[i]+'</span>').join('')+'</div>'+
+      '<div class="lv-list">'+(recent.length ? recent.map(r=>{ const lv = rubricLevel(r.diary); return '<div class="lv-item"><div class="lv-top"><span class="muted-sm">'+(DATE_LABELS[r.dateKey]||r.dateKey)+' · '+(MOOD_LABEL[r.mood]||'')+'</span><span class="lv-chip lv'+lv+'">'+lv+'단계 · '+RUBRIC_LABEL[lv]+'</span></div><p class="lv-text">'+esc(r.diary)+'</p></div>'; }).join('') : '<p class="muted-sm">아직 쓴 일지가 없어요.</p>')+'</div>'+
+      '<p class="muted-sm" style="margin-top:10px">단계는 문장 속 단어로 자동 추정한 값이에요. 교사가 확인해 고칠 수 있어요.</p>'+
+    '</div>'+
+
+    '<div class="section-label">사전 · 사후 소비 유형 진단</div>'+
+    '<div class="card" style="margin-top:0">'+
+      '<div class="pp-legend"><span><i style="background:var(--gray-seg)"></i>'+PRE_DIAGNOSIS.label+' (예시)</span><span><i style="background:var(--primary)"></i>'+(post?'사후 진단 · 이번 주':'사후 진단 전')+'</span></div>'+
+      PERSONA_ORDER.map(k=>{
+        const p = PERSONAS[k], pre = PRE_DIAGNOSIS.sums[k], po = post ? post[k] : null;
+        const dd = po===null ? '' : (po-pre===0 ? '변화 없음' : (po-pre>0?'+':'−')+Math.abs(po-pre));
+        return '<div class="pp-row"><span class="score-emoji">'+pImg(p,30)+'</span><div class="pp-body"><div class="pp-top"><span>'+p.tag+'</span><span class="pp-num">'+pre+(po===null?'':' → '+po+' <b>('+dd+')</b>')+'</span></div>'+
+          '<div class="pp-bars"><div class="score-track"><div class="score-fill" style="width:'+Math.round(pre/maxG[k]*100)+'%;background:var(--gray-seg)"></div></div>'+
+          (po===null?'':'<div class="score-track"><div class="score-fill" style="width:'+Math.round(po/maxG[k]*100)+'%;background:'+p.color+'"></div></div>')+'</div></div></div>';
+      }).join('')+
+      (post ? '<p class="muted-sm" style="margin-top:12px">“나만의 기준” 점수가 오르고 “느낌을 따라가는” 점수가 내려가면 합리적 소비 쪽으로 변화했다고 봐요.</p>'
+            : '<button class="primary-btn" style="margin-top:14px;padding:14px;background:var(--blue)" data-action="go-diagnosis">사후 진단 하러 가기</button>')+
+    '</div>'+
+
+    '<div class="section-label">교사용 데이터 내보내기</div>'+
+    '<div class="card" style="margin-top:0">'+
+      '<label class="field-label" for="sid">학생 ID (실명 대신 번호로 적어 주세요)</label>'+
+      '<input id="sid" class="text-input" type="text" data-input="student-id" value="'+esc(state.studentId)+'" style="font-size:15px">'+
+      '<div class="csv-grid">'+
+        '<button class="outline-btn" data-action="csv" data-arg="txn">'+icon('list',18)+'거래 기록 CSV</button>'+
+        '<button class="outline-btn" data-action="csv" data-arg="diary">'+icon('pen',18)+'성찰 일지 CSV</button>'+
+        '<button class="outline-btn" data-action="csv" data-arg="week">'+icon('trend',18)+'주간 지표 CSV</button>'+
+      '</div>'+
+      '<p class="muted-sm" style="margin-top:12px;line-height:1.6">엑셀에서 바로 열리는 파일로 저장돼요. 수집 전 학생 동의(만 14세 미만은 보호자 동의)를 받고, 이름 대신 학생 ID만 사용해 주세요.</p>'+
+    '</div>'+
+    '<p class="disclaimer">지표는 성적이 아니라 성장 피드백용이에요.<br>앱을 새로고침하면 이번 주 기록은 처음 예시 상태로 돌아가요.</p>'+
+    '<div style="height:32px"></div>'+
+  '</div>';
+}
+function csvCell(v){
+  if(v===null || v===undefined) return '';
+  let s = String(v);
+  if(typeof v==='string' && /^[=+\-@]/.test(s) && isNaN(Number(s))) s = "'"+s;
+  return /[",\r\n]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s;
+}
+function downloadCSV(name, rows){
+  const csv = '﻿' + rows.map(r=>r.map(csvCell).join(',')).join('\r\n');
+  const url = URL.createObjectURL(new Blob([csv], {type:'text/csv;charset=utf-8'}));
+  const a = document.createElement('a');
+  a.href = url; a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url), 1500);
+}
+function exportCSV(kind){
+  const sid = state.studentId.trim() || '학생';
+  const safe = sid.replace(/[\\/:*?"<>|\s]+/g,'_');
+  const yn = b => b ? 'O' : 'X';
+  const CLS = {need:'필요', impulse:'충동'};
+  const SRC = {manual:'직접 입력', receipt:'영수증', auto:'계좌 자동'};
+  if(kind==='txn'){
+    const rows = [['학생ID','날짜','물품명','카테고리','세부','금액','기록방식','필요/충동','사기전_꼭필요','사기전_예산안','사기전_중복없음','사기전_메모','계획일치']];
+    state.transactions.forEach(t=>{
+      const b = t.before;
+      const plan = b && t.cls ? yn(plannedAs(t)===t.cls) : '';
+      rows.push([sid, '2026-'+t.dateKey, t.name, CATS[t.cat].full, t.sub, Math.abs(t.amount), SRC[t.src]||'', CLS[t.cls]||'미분류', b?yn(b.checks[0]):'', b?yn(b.checks[1]):'', b?yn(b.checks[2]):'', b?b.memo:'', plan]);
+    });
+    downloadCSV('직조_거래기록_'+safe+'.csv', rows);
+  } else if(kind==='diary'){
+    const rows = [['학생ID','날짜','감정','한줄일지','성찰단계(자동)','성찰단계_설명']];
+    state.reflections.slice().sort((a,b)=>a.dateKey<b.dateKey?-1:1).forEach(r=>{
+      const lv = rubricLevel(r.diary);
+      rows.push([sid, '2026-'+r.dateKey, MOOD_LABEL[r.mood]||'', r.diary||'', lv===null?'':lv, lv===null?'':RUBRIC_LABEL[lv]]);
+    });
+    downloadCSV('직조_성찰일지_'+safe+'.csv', rows);
+  } else {
+    const rows = [['학생ID','주차','기간','데이터','기록일수율(%)','돌아보기완료율(%)','정리율(%)','사기전작성률(%)','생각깊이(0-3)','메모작성률(%)','일지작성률(%)','성찰수준(0-3)','계획일치도(%)','충동소비비율(%)','후회비율(%)','직조지수']];
+    allWeeks().forEach(w=>rows.push([sid, w.label, w.range, w.live?'실제':'예시', pct(w.rec), pct(w.done), pct(w.org), pct(w.before), w.depth.toFixed(1), pct(w.memo), pct(w.diaryRate), w.rubric.toFixed(1), pct(w.plan), pct(w.impulse), pct(w.regret), w.index]));
+    downloadCSV('직조_주간지표_'+safe+'.csv', rows);
+  }
+}
+
 /* ---------------- FORM (manual & receipt) ---------------- */
 function formValid(){ const f=state.form; return f && f.name.trim().length>0 && Number(f.amount)>0; }
 function formFields(){
@@ -1572,6 +1876,7 @@ function screenHTML(){
     if(F.type==='receipt') return renderReceipt(F.step);
     if(F.type==='guide') return renderGuide();
     if(F.type==='ai') return renderAI();
+    if(F.type==='growth') return renderGrowth();
   }
   if(state.diagView==='intro') return renderDiagnosisIntro();
   if(state.diagView==='quiz') return renderQuiz();
@@ -1837,8 +2142,13 @@ const ACTIONS = {
     const today = todaysTxns();
     if(!state.mood || !today.every(t=>t.cls)) return;
     STAGES[1].missions[2].done = true;
+    state.reflections = state.reflections.filter(r=>r.dateKey!==TODAY_KEY).concat([{dateKey:TODAY_KEY, mood:state.mood, diary:state.diaryText.trim()}]);
     setTimeout(()=>showToast('오늘의 소비 돌아보기가 저장되었어요'),0);
   },
+  'open-growth'(){ startFlow('growth'); },
+  'growth-metric'(el){ state.growthMetric = el.dataset.arg; },
+  'csv'(el){ exportCSV(el.dataset.arg); setTimeout(()=>showToast('CSV 파일을 저장했어요'),0); },
+  'go-diagnosis'(){ state.flow=null; state.flowReturn=null; state.tab='home'; state.quizAnswers={}; state.quizIndex=0; state.diagnosis=null; state.diagView='intro'; navDir='push'; },
   'stage-prev'(){ if(state.stageView>0){ state.stageView--; state.stageDir='prev'; } },
   'stage-next'(){ if(state.stageView<STAGES.length-1){ state.stageView++; state.stageDir='next'; } }
 };
@@ -1947,6 +2257,7 @@ document.addEventListener('input', function(e){
   else if(k==='bank-search') state.bank.search = el.value;
   else if(k==='acct'){ el.value = el.value.replace(/\D/g,'').slice(0,14); state.acct.number = el.value; }
   else if(k==='owner') state.acct.owner = el.value;
+  else if(k==='student-id') state.studentId = el.value.slice(0,20);
   else if(k==='digit'){
     const i = +el.dataset.i;
     const v = el.value.replace(/\D/g,'').slice(-1);
