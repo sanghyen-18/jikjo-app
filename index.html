@@ -428,6 +428,7 @@
 
   .stage-carousel{position:relative;text-align:center;padding:10px 40px 4px;}
   .stage-emoji{font-size:52px;margin-bottom:10px;}
+  .knit-ico{display:inline-block;vertical-align:-0.12em;}
   .stage-title{font-size:19px;font-weight:800;margin:0 0 8px;}
   .stage-desc{font-size:13.5px;color:var(--muted);margin:0;line-height:1.5;min-height:40px;}
   .car-arrow{position:absolute;top:44px;width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--card);display:flex;align-items:center;justify-content:center;z-index:2;}
@@ -444,6 +445,15 @@
   .mission-text{flex:1;font-size:14.5px;font-weight:600;}
   .mission-text.done{color:var(--muted);text-decoration:line-through;}
   .mission-tag{font-size:11.5px;font-weight:700;color:var(--tag-warn-text);background:var(--warn-bg);padding:4px 10px;border-radius:12px;}
+  .mission-tag.lock{color:var(--gray-text);background:var(--gray);}
+  .mission-check.lock{background:var(--gray);color:var(--gray-text);}
+  .missions-locked .mission-text{color:var(--muted);}
+  .stage-locked .stage-emoji{opacity:.8;}
+  .stage-badge{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:800;padding:4px 10px;border-radius:12px;margin:0 0 8px;}
+  .stage-badge.lock{background:var(--gray);color:var(--gray-text);}
+  .stage-badge.clear{background:var(--primary-tint);color:var(--primary-text);}
+  .stage-badge.now{background:var(--warn-bg);color:var(--tag-warn-text);}
+  .dots span.cleared{background:var(--primary-tint2);}
 
   .persona-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 16px 14px;}
   .persona-card{background:var(--card);border-radius:16px;padding:14px;display:flex;gap:10px;align-items:flex-start;}
@@ -642,6 +652,71 @@
   .ai-step.active .st-ic{background:transparent;color:var(--primary-text);}
   .disclaimer{font-size:12px;color:var(--muted);text-align:center;margin:16px 20px 0;line-height:1.6;}
 
+  /* login */
+  .hdr-actions{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+  .login{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;padding:16px 20px calc(32px + env(safe-area-inset-bottom));}
+  .login-top{display:flex;justify-content:flex-end;}
+  .login-brand{text-align:center;margin:44px 0 28px;}
+  .login-mark{width:84px;height:84px;border-radius:50%;background:var(--avatar-bg);display:flex;align-items:center;justify-content:center;font-size:42px;margin:0 auto 16px;}
+  .login-name{font-size:26px;font-weight:800;margin:0 0 6px;}
+  .login-card{background:var(--card);border-radius:20px;padding:22px 18px;box-shadow:var(--shadow);}
+  .role-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .role{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:16px 14px;border-radius:16px;border:1.5px solid var(--border);background:var(--card);text-align:left;}
+  .role.on{border-color:var(--primary);background:var(--primary-tint);}
+  .role-ic{width:38px;height:38px;border-radius:12px;background:var(--gray);color:var(--muted);display:flex;align-items:center;justify-content:center;margin-bottom:6px;transition:background-color .2s, color .2s;}
+  .role.on .role-ic{background:var(--primary);color:#fff;}
+  .role-l{font-size:15.5px;font-weight:800;}
+  .role-d{font-size:12px;color:var(--muted);font-weight:600;}
+  .pw-input{letter-spacing:6px;font-size:20px;}
+  .pw-input::placeholder{letter-spacing:0;font-size:15px;}
+  .pw-input.err{border-color:var(--danger);}
+  .shake{animation:shake .45s ease both;}
+
+  /* teacher */
+  .t-lead{font-size:13.5px;color:var(--muted);line-height:1.55;margin:12px 0 4px;}
+  .t-dist{padding:12px 0;border-bottom:1px solid var(--border);}
+  .t-dist-t{font-size:14px;font-weight:800;}
+  .t-legend{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:11.5px;color:var(--muted);font-weight:600;margin-top:12px;}
+  .t-legend span{display:flex;align-items:center;gap:5px;}
+  .t-legend i{width:9px;height:9px;border-radius:3px;display:inline-block;}
+  .t-change{display:flex;align-items:center;justify-content:space-around;gap:10px;margin:14px 0 8px;text-align:center;}
+  .t-change div{display:flex;flex-direction:column;gap:4px;}
+  .t-change b{font-size:24px;font-weight:800;font-variant-numeric:tabular-nums;}
+  .t-arrow{color:var(--muted);display:flex;}
+  .t-filter{margin:6px 16px 10px;}
+  .t-list{display:flex;flex-direction:column;gap:10px;margin:0 16px;}
+  .t-row{width:100%;text-align:left;border:none;background:var(--card);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);}
+  .t-row-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px;}
+  .t-id{font-size:15.5px;font-weight:800;display:flex;align-items:center;gap:6px;}
+  .live-tag{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:8px;background:var(--blue-tint);color:var(--auto-text);}
+  .t-grades{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
+  .t-grades div{display:flex;flex-direction:column;align-items:flex-start;gap:5px;}
+  .t-g-l{font-size:11px;color:var(--muted);font-weight:700;}
+  .gp{display:inline-block;font-size:11.5px;font-weight:800;padding:4px 9px;border-radius:10px;white-space:nowrap;}
+  .gp.g0{background:var(--primary);color:#fff;}
+  .gp.g1{background:var(--primary-tint);color:var(--primary-text);}
+  .gp.g2{background:var(--blue-tint);color:var(--blue-text);}
+  .gp.g3{background:var(--warn-bg);color:var(--warn-text);}
+  .gp.g4{background:var(--danger-tint);color:var(--danger-text);}
+  .t-metric{font-size:20px;font-weight:800;margin:14px 0 2px;font-variant-numeric:tabular-nums;}
+  .t-weeks{display:flex;align-items:flex-end;gap:10px;height:96px;margin-top:14px;}
+  .tw{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:4px;}
+  .tw i{display:block;width:100%;max-width:36px;border-radius:8px 8px 3px 3px;background:var(--primary-tint2);transform-origin:bottom;animation:growY .6s var(--ease) both;}
+  .tw:last-child i{background:var(--primary);}
+  .tw-v{font-size:11.5px;font-weight:800;font-variant-numeric:tabular-nums;}
+  .tw-l{font-size:11px;color:var(--muted);font-weight:700;}
+  .t-scale{display:flex;flex-direction:column;gap:6px;margin-top:16px;}
+  .t-level{display:flex;gap:10px;align-items:flex-start;padding:9px 11px;border-radius:12px;border:1.5px solid transparent;font-size:12.5px;color:var(--muted);}
+  .t-level.on{color:var(--text);border-color:var(--border);background:var(--gray);}
+  .t-level.on.g0,.t-level.on.g1{border-color:var(--primary);background:var(--primary-tint);}
+  .t-lv-n{width:58px;flex-shrink:0;font-weight:800;}
+  .t-lv-t{line-height:1.45;}
+  .t-dates{padding:12px 0 2px;}
+  .t-date-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+  .t-date-chips span{font-size:11.5px;font-weight:700;padding:4px 8px;border-radius:8px;background:var(--gray);color:var(--muted);font-variant-numeric:tabular-nums;}
+  .t-pp{margin-top:14px;}
+  .t-pp b{font-size:13.5px;}
+  .t-verdict{font-size:13.5px;font-weight:800;margin:12px 0 0;}
   /* growth report */
   .gr-hero .week-chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:var(--primary-text);background:var(--primary-tint);padding:4px 10px;border-radius:10px;}
   .gr-score{display:flex;align-items:baseline;gap:6px;margin:14px 0 2px;}
@@ -751,7 +826,11 @@ const ICON_PATHS = {
   receipt:'<path d="M6 3h12v18l-2-1.5L14 21l-2-1.5L10 21l-2-1.5L6 21z"/><path d="M9 8h6M9 12h6M9 16h3"/>',
   target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/>',
   list:'<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>',
-  trend:'<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>'
+  trend:'<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
+  logout:'<path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"/><path d="M9 16l-4-4 4-4"/><path d="M5 12h10"/>',
+  user:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+  users:'<circle cx="9" cy="8" r="3.5"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8"/><path d="M18 14.2a6 6 0 0 1 3 5.8"/>',
+  clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'
 };
 function icon(name, size){
   size = size || 20;
@@ -768,7 +847,7 @@ const CATS = {
   transport:{label:'교통', full:'교통', icon:'bus', color:'var(--c-transport)', sub:'교통'},
   snack:{label:'간식', full:'간식', icon:'gift', color:'var(--c-snack)', sub:'간식'},
   etc:{label:'기타', full:'기타', icon:'star', color:'var(--c-etc)', sub:'기타'},
-  unset:{label:'미정', full:'용도 미정', icon:'help', color:'var(--c-etc)', sub:'용도 선택 필요'}
+  unset:{label:'분류 전', full:'분류 전', icon:'help', color:'var(--c-etc)', sub:'지출 항목 선택 필요'}
 };
 const CAT_ORDER = ['food','cafe','shopping','game','beauty','transport','snack'];
 const PICK_CATS = ['food','cafe','shopping','game','beauty','transport','snack','etc'];
@@ -784,7 +863,7 @@ const LAST_WEEK = {total:38200, impulse:42};
 const BANKS = ['KB국민','신한','우리','하나','NH농협','IBK기업','카카오뱅크','토스뱅크','케이뱅크','우체국','새마을금고','지역은행'];
 const PREPAID = ['청소년 선불카드','간편결제 머니','충전식 교통카드'];
 
-const BEFORE_QS = ['꼭 필요한 물건인가요?','이번 주 예산 안에서 사는 건가요?','비슷한 걸 이미 갖고 있지 않나요?'];
+const BEFORE_QS = ['꼭 필요한 물건인가요?','이번 주 예산 안에서 사는 건가요?','비슷한 걸 이미 갖고 있지 않나요?','일주일 뒤에도 사고 싶을까요?'];
 const AFTER_PROMPTS = ['오늘 가장 잘한 소비는','다음엔 다르게 하고 싶은 점은','사고 싶은 마음이 든 순간은','아낄 수 있었던 돈은'];
 
 const RECEIPTS = [
@@ -802,7 +881,7 @@ const state = {
   quizIndex:0, quizAnswers:{}, quizDir:'next',
   diagnosis:null,
   mood:null, diaryText:'',
-  currentStage:1, stageView:1, stageDir:'next',
+  stageView:2, stageDir:'next',
   toast:null,
   lastMethod:null,
   linked:null, imported:false,
@@ -813,6 +892,10 @@ const state = {
   syncing:false,
   receipt:{image:null, sample:0, scanStep:0},
   guideTab:'ledger',
+  role:null,
+  login:{role:'learner', pw:'', error:false, attempt:0},
+  teacher:{sel:null, filter:'all', memo:{}},
+  access:{logins:0, since:null, ms:0},
   ai:{loading:false, step:0, report:null, sig:'', label:'7월 20일 (월) 오전 9:00 도착', challenge:false},
   studentId:'학생-001',
   growthMetric:'index',
@@ -826,25 +909,25 @@ const state = {
   transactions:[
     {id:1,dateKey:'07-19',name:'학교 앞 분식',cat:'food',sub:'식사',amount:-4500,cls:'need',src:'manual'},
     {id:2,dateKey:'07-19',name:'버블티',cat:'cafe',sub:'간식',amount:-5500,cls:null,src:'manual'},
-    {id:3,dateKey:'07-18',name:'편의점 과자',cat:'snack',sub:'간식',amount:-2800,cls:'impulse',src:'manual',before:{checks:[false,true,false],memo:''}},
-    {id:4,dateKey:'07-18',name:'버스',cat:'transport',sub:'교통',amount:-1400,cls:'need',src:'manual',before:{checks:[true,true,true],memo:''}},
-    {id:5,dateKey:'07-17',name:'모바일 게임 아이템',cat:'game',sub:'게임',amount:-11000,cls:'impulse',src:'manual',before:{checks:[false,false,false],memo:'친구들이 다 사서'}},
-    {id:6,dateKey:'07-17',name:'점심 - 김밥천국',cat:'food',sub:'식사',amount:-6000,cls:'need',src:'manual',before:{checks:[true,true,false],memo:''}},
-    {id:7,dateKey:'07-16',name:'스티커팩',cat:'beauty',sub:'미용',amount:-3300,cls:'impulse',src:'manual',before:{checks:[true,false,false],memo:'예뻐서 꼭 갖고 싶었어요'}},
+    {id:3,dateKey:'07-18',name:'편의점 과자',cat:'snack',sub:'간식',amount:-2800,cls:'impulse',src:'manual',before:{checks:[false,true,false,false],memo:''}},
+    {id:4,dateKey:'07-18',name:'버스',cat:'transport',sub:'교통',amount:-1400,cls:'need',src:'manual',before:{checks:[true,true,true,true],memo:''}},
+    {id:5,dateKey:'07-17',name:'모바일 게임 아이템',cat:'game',sub:'게임',amount:-11000,cls:'impulse',src:'manual',before:{checks:[false,false,false,false],memo:'친구들이 다 사서'}},
+    {id:6,dateKey:'07-17',name:'점심 - 김밥천국',cat:'food',sub:'식사',amount:-6000,cls:'need',src:'manual',before:{checks:[true,true,false,true],memo:''}},
+    {id:7,dateKey:'07-16',name:'스티커팩',cat:'beauty',sub:'미용',amount:-3300,cls:'impulse',src:'manual',before:{checks:[true,false,false,false],memo:'예뻐서 꼭 갖고 싶었어요'}},
     {id:8,dateKey:'07-15',name:'아이스크림',cat:'snack',sub:'간식',amount:-2000,cls:null,src:'manual'},
-    {id:9,dateKey:'07-14',name:'문구류',cat:'shopping',sub:'학용품',amount:-7800,cls:'need',src:'manual',before:{checks:[true,true,true],memo:'수행평가 준비물'}},
+    {id:9,dateKey:'07-14',name:'문구류',cat:'shopping',sub:'학용품',amount:-7800,cls:'need',src:'manual',before:{checks:[true,true,true,true],memo:'수행평가 준비물'}},
     {id:10,dateKey:'07-13',name:'지하철',cat:'transport',sub:'교통',amount:-1400,cls:'need',src:'manual'}
   ]
 };
 
 const STAGES = [
   {emoji:'🧶', title:'① 실 준비', desc:'나의 소비 습관을 진단하고 학습을 시작합니다.',
-   missions:[{text:'가계부 처음으로 작성해보기', done:true},{text:'소비 자가진단 완료하기', done:true},{text:'오늘 쓴 돈 전부 기록하기', done:false},{text:'용돈 목표 금액 설정하기', done:false}]},
+   missions:[{text:'가계부 처음으로 작성해보기', done:true},{text:'소비 자가진단 완료하기', done:true},{text:'오늘 쓴 돈 전부 기록하기', done:true},{text:'용돈 목표 금액 설정하기', done:true}]},
   {emoji:'🧵', title:'② 날실 걸기', desc:'올바른 소비의 기초 지식과 기준을 세웁니다.',
-   missions:[{text:'가계부 3일 연속 작성', done:true},{text:'소비 자가진단 완료하기', done:true},{text:'오늘의 소비 돌아보기 작성', done:false},{text:'충동 소비 없이 3일 보내기', done:false}]},
+   missions:[{text:'가계부 3일 연속 작성', done:true},{text:'소비 자가진단 완료하기', done:true},{text:'오늘의 소비 돌아보기 작성', done:true},{text:'충동 소비 없이 3일 보내기', done:true}]},
   {emoji:'🪡', title:'③ 씨실 넣기', desc:'다양한 소비 상황을 체험하며 합리적인 선택을 연습합니다.',
-   missions:[{text:'가계부 1주일 연속 작성', done:true},{text:'카테고리별 소비 패턴 확인하기', done:false},{text:'이번 주 간식비 예산 세우기', done:false},{text:'충동 소비 이유 일지에 기록하기', done:false},{text:'친구에게 소비 습관 팁 공유하기', done:false}]},
-  {emoji:'🟦', title:'④ 직조 하기', desc:'미션과 활동을 반복하며 올바른 소비 습관을 만들어 갑니다.',
+   missions:[{text:'가계부 1주일 연속 작성', done:true},{text:'카테고리별 소비 패턴 확인하기', done:false, key:'pattern'},{text:'이번 주 간식비 예산 세우기', done:false},{text:'충동 소비 이유 일지에 기록하기', done:false, key:'impulseDiary'},{text:'친구에게 소비 습관 팁 공유하기', done:false}]},
+  {emoji:'<svg class="knit-ico" viewBox="0 0 48 48" width="1em" height="1em" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="9" fill="#A8C8F0"/><rect x="4" y="4" width="40" height="40" rx="9" fill="none" stroke="#4A78C9" stroke-width="1.6" opacity=".55"/><path d="M6.5 8.2l3.5 4.8 3.5-4.8M15.5 8.2l3.5 4.8 3.5-4.8M24.5 8.2l3.5 4.8 3.5-4.8M33.5 8.2l3.5 4.8 3.5-4.8M6.5 13.8l3.5 4.8 3.5-4.8M15.5 13.8l3.5 4.8 3.5-4.8M24.5 13.8l3.5 4.8 3.5-4.8M33.5 13.8l3.5 4.8 3.5-4.8M6.5 19.4l3.5 4.8 3.5-4.8M15.5 19.4l3.5 4.8 3.5-4.8M24.5 19.4l3.5 4.8 3.5-4.8M33.5 19.4l3.5 4.8 3.5-4.8M6.5 25.0l3.5 4.8 3.5-4.8M15.5 25.0l3.5 4.8 3.5-4.8M24.5 25.0l3.5 4.8 3.5-4.8M33.5 25.0l3.5 4.8 3.5-4.8M6.5 30.6l3.5 4.8 3.5-4.8M15.5 30.6l3.5 4.8 3.5-4.8M24.5 30.6l3.5 4.8 3.5-4.8M33.5 30.6l3.5 4.8 3.5-4.8M6.5 36.2l3.5 4.8 3.5-4.8M15.5 36.2l3.5 4.8 3.5-4.8M24.5 36.2l3.5 4.8 3.5-4.8M33.5 36.2l3.5 4.8 3.5-4.8" fill="none" stroke="#4A78C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>', title:'④ 직조 하기', desc:'미션과 활동을 반복하며 올바른 소비 습관을 만들어 갑니다.',
    missions:[{text:'한 달 소비 리포트 직접 분석하기', done:false},{text:'불필요한 구독 서비스 1개 해지하기', done:false},{text:'이번 달 절약 목표 달성하기', done:false},{text:'소비 성찰 일지 5회 이상 작성', done:false}]},
   {emoji:'🧣', title:'⑤ 직조물 완성', desc:'건강한 소비 가치관을 갖춘 합리적 소비자로 성장합니다.',
    missions:[{text:'한 달 용돈 예산 내로 생활하기', done:false},{text:'저축 목표 금액 설정 후 달성하기', done:false},{text:'소비 마스터 뱃지 획득하기', done:false}]}
@@ -948,7 +1031,7 @@ function conicGradient(entries, span, from){
   return 'conic-gradient(from '+(from||0)+'deg, '+stops.join(',')+')';
 }
 function dataSig(){ return state.transactions.map(t=>t.id+':'+t.cat+':'+t.cls).join('|'); }
-function newForm(extra){ return Object.assign({name:'', amount:'', cat:'food', sub:null, beforeOpen:false, checks:[false,false,false], memo:'', suggested:null}, extra||{}); }
+function newForm(extra){ return Object.assign({name:'', amount:'', cat:'food', sub:null, beforeOpen:false, checks:[false,false,false,false], memo:'', suggested:null}, extra||{}); }
 
 /* ---------------- AI REPORT ---------------- */
 function buildReport(){
@@ -981,7 +1064,7 @@ function buildReport(){
     sols.push({title:'충동 소비를 잘 참았어요', obs:'충동 소비 '+impulsePct+'% · 지난주 '+LAST_WEEK.impulse+'%', tip:'지금처럼 사기 전에 한 번 더 생각하는 습관을 이어가요.'});
   }
   if(unsorted>0){
-    sols.push({title:'아직 정리하지 않은 소비가 '+unsorted+'건 있어요', obs:'용도나 필요·충동을 고르지 않았어요', tip:'돌아보기에서 정리하면 다음 주 분석이 더 정확해져요.', action:{label:'돌아보기로 가기 →', act:'go-reflect'}});
+    sols.push({title:'아직 정리하지 않은 소비가 '+unsorted+'건 있어요', obs:'지출 항목이나 필요·충동을 고르지 않았어요', tip:'돌아보기에서 정리하면 다음 주 분석이 더 정확해져요.', action:{label:'돌아보기로 가기 →', act:'go-reflect'}});
   } else {
     sols.push({title:maxDay.d+'요일에 가장 많이 썼어요', obs:fmt(maxDay.v)+' 지출', tip:'그날 어떤 상황이었는지 한 줄 일지에 남겨 보세요. 반복되는 패턴이 보여요.'});
   }
@@ -1016,8 +1099,8 @@ function setTheme(t){
   try{ localStorage.setItem('jikjo-theme', t); }catch(e){}
 }
 function header(title){
-  if(!title) return '<div class="header"><div><p class="brand">직조(織造)</p><p class="tagline">나만의 소비 습관을 만들어가다.</p></div>'+themeBtn()+'</div>';
-  return '<div class="header"><div><p class="brand-sm">직조(織造)</p><p class="page-title">'+title+'</p></div>'+themeBtn()+'</div>';
+  if(!title) return '<div class="header"><div><p class="brand">직조(織造)</p><p class="tagline">나만의 소비 습관을 만들어가다.</p></div><div class="hdr-actions">'+themeBtn()+logoutBtn()+'</div></div>';
+  return '<div class="header"><div><p class="brand-sm">직조(織造)</p><p class="page-title">'+title+'</p></div><div class="hdr-actions">'+themeBtn()+logoutBtn()+'</div></div>';
 }
 function appBar(title, right){
   return '<div class="appbar"><button class="icon-btn ghost" data-action="flow-back" aria-label="뒤로">'+icon('chevron-left',24)+'</button><div class="appbar-title">'+(title||'')+'</div><div class="appbar-right">'+(right||'')+'</div></div>';
@@ -1050,7 +1133,7 @@ const GLASS_LAYERS = '<span class="lg-base"></span><span class="lg-sheen"></span
 const PILL_LAYERS = '<span class="p-solid"></span><span class="p-glass"></span><span class="p-edge"></span><span class="p-hi"></span><span class="p-caustic"></span>';
 function renderNav(){
   const items = [{key:'home',label:'홈',ic:'house'},{key:'ledger',label:'가계부',ic:'book'},{key:'reflect',label:'돌아보기',ic:'smile'},{key:'stage',label:'스테이지',ic:'trophy'}];
-  const hidden = !!state.flow;
+  const hidden = !!state.flow || state.role!=='learner';
   const idx = Math.max(0, NAV_KEYS.indexOf(state.tab));
   return '<nav class="bottom-nav'+(hidden?' hidden':'')+'" data-drag="nav" aria-label="메인 메뉴">'+GLASS_LAYERS+
     '<span class="lg-light-wrap"><span class="lg-light" style="transform:rotate('+((idx-1.5)*10)+'deg)"></span></span>'+
@@ -1061,13 +1144,14 @@ function renderNav(){
     }).join('')+'</nav>';
 }
 function renderFab(){
-  const show = state.tab==='ledger' && !state.flow && !state.diagView;
-  return '<button class="fab'+(show?'':' hidden')+'" data-action="quick-add" aria-label="소비 추가">'+icon('plus',26)+'</button>';
+  const show = state.role==='learner' && state.tab==='ledger' && !state.flow && !state.diagView;
+  return '<button class="fab'+(show?'':' hidden')+'" data-action="quick-add" aria-label="소비 내역 추가">'+icon('plus',26)+'</button>';
 }
 
 /* ---------------- HOME ---------------- */
 function renderHome(){
-  const stage = STAGES[state.currentStage];
+  const cs = currentStageIdx();
+  const stage = STAGES[cs];
   const done = stage.missions.filter(m=>m.done).length;
   const pct = Math.round(done/stage.missions.length*100);
   const p = state.diagnosis ? PERSONAS[state.diagnosis] : null;
@@ -1086,7 +1170,7 @@ function renderHome(){
   '</div>'+
   typeCard+
   '<div class="card stage-card">'+
-    '<div class="card-row"><div class="stage-name"><span class="icon-box">'+stage.emoji+'</span>스테이지 '+(state.currentStage+1)+'</div>'+
+    '<div class="card-row"><div class="stage-name"><span class="icon-box">'+stage.emoji+'</span>스테이지 '+(cs+1)+'</div>'+
     '<div class="stage-count">'+done+'/'+stage.missions.length+' 미션 완료</div></div>'+
     '<div class="progress-track"><div class="progress-fill" style="width:'+pct+'%"></div></div>'+
     '<p class="stage-sub">다음 스테이지까지 미션 '+(stage.missions.length-done)+'개 남았어요</p>'+
@@ -1128,7 +1212,7 @@ function txnCard(t){
   let tag = '';
   if(t.cls==='need') tag = '<div class="item-tag tag-need">필요 ✓</div>';
   else if(t.cls==='impulse') tag = '<div class="item-tag tag-impulse">충동</div>';
-  const sub = t.cat==='unset' ? '용도를 골라 주세요' : c.full+' · '+esc(t.sub);
+  const sub = t.cat==='unset' ? '지출 항목을 골라 주세요' : c.full+' · '+esc(t.sub);
   const chips = t.cat==='unset' ? '<div class="chip-row"><span class="hint">어디에 쓴 돈인가요?</span>'+PICK_CATS.map(k=>'<button class="chip" data-action="pick-cat" data-id="'+t.id+'" data-arg="'+k+'">'+CATS[k].label+'</button>').join('')+'</div>' : '';
   return '<div class="txn-card pop-in" data-key="t'+t.id+'"><div class="txn-main">'+txnIcon(t)+
     '<div class="item-body"><p class="item-name">'+esc(t.name)+srcBadge(t)+'</p><p class="item-sub">'+sub+(t.meta?' · '+t.meta:'')+'</p></div>'+
@@ -1145,8 +1229,8 @@ function renderLedger(){
   const nonePct = 100-needPct-impulsePct;
   const unset = state.transactions.filter(x=>x.cat==='unset').length;
   let pending = '';
-  if(unset>0) pending = '<div class="banner warn">'+icon('info',18)+'<span>용도를 고르지 않은 내역이 '+unset+'건 있어요</span></div>';
-  else if(state.imported) pending = '<button class="banner ok" data-action="go-reflect">'+icon('check',18)+'<span style="flex:1">모든 내역의 용도를 골랐어요. 오늘의 소비 돌아보기로 가 볼까요?</span></button>';
+  if(unset>0) pending = '<div class="banner warn">'+icon('info',18)+'<span>지출 항목을 고르지 않은 내역이 '+unset+'건 있어요</span></div>';
+  else if(state.imported) pending = '<button class="banner ok" data-action="go-reflect">'+icon('check',18)+'<span style="flex:1">모든 내역의 지출 항목을 골랐어요. 오늘의 소비 돌아보기로 가 볼까요?</span></button>';
   const list = groupByDate().map(g=>{
     const dayTotal = totalSpend(g.items);
     return '<div class="date-header" data-key="d'+g.key+'"><span>'+g.label+'</span><span>'+fmt(dayTotal)+'</span></div>'+g.items.map(txnCard).join('');
@@ -1201,7 +1285,7 @@ function renderReflect(){
 function beforeNote(t){
   if(!t.before) return '';
   const n = t.before.checks.filter(Boolean).length;
-  const txt = t.before.memo ? '사기 전: “'+esc(t.before.memo)+'”' : '사기 전 체크 '+n+'/3';
+  const txt = t.before.memo ? '사기 전: “'+esc(t.before.memo)+'”' : '사기 전 체크 '+n+'/'+BEFORE_QS.length;
   return '<div class="before-note">'+icon('bulb',13)+'<span>'+txt+'</span></div>';
 }
 function renderReflectForm(){
@@ -1227,24 +1311,44 @@ function renderReflectForm(){
 }
 
 /* ---------------- STAGE ---------------- */
+function stageDone(s){ return s.missions.every(m=>m.done); }
+function currentStageIdx(){ const i = STAGES.findIndex(s=>!stageDone(s)); return i<0 ? STAGES.length-1 : i; }
+function completeMission(key){
+  const cs = currentStageIdx();
+  const m = STAGES[cs].missions.find(x=>x.key===key && !x.done);
+  if(!m) return null;
+  m.done = true;
+  if(stageDone(STAGES[cs]) && cs < STAGES.length-1) return '스테이지 '+(cs+1)+' 완료! 다음 스테이지가 열렸어요';
+  return '미션 완료 · '+m.text;
+}
 function renderStage(){
   const idx = state.stageView;
+  const cs = currentStageIdx();
   const stage = STAGES[idx];
+  const locked = idx > cs;
+  const cleared = stageDone(stage);
   const done = stage.missions.filter(m=>m.done).length;
   const pct = Math.round(done/stage.missions.length*100);
   const dirCls = state.stageDir==='prev' ? 'from-left' : 'from-right';
+  const badge = locked ? '<span class="stage-badge lock">'+icon('lock',13)+'잠김</span>'
+    : (cleared ? '<span class="stage-badge clear">'+icon('check',13)+'완료</span>' : '<span class="stage-badge now">진행 중</span>');
+  const sub = locked ? '이전 스테이지를 모두 완료하면 열려요'
+    : (cleared ? '이 스테이지의 미션을 모두 완료했어요' : '미션을 완료해 다음 스테이지로 올라가요');
   return header('스테이지')+
   '<div class="card" style="overflow:hidden"><div class="stage-carousel">'+
     '<button class="car-arrow left" data-action="stage-prev" aria-label="이전 스테이지" '+(idx===0?'disabled':'')+'>'+icon('chevron-left',18)+'</button>'+
     '<button class="car-arrow right" data-action="stage-next" aria-label="다음 스테이지" '+(idx===STAGES.length-1?'disabled':'')+'>'+icon('chevron-right',18)+'</button>'+
-    '<div class="'+dirCls+'" data-key="s'+idx+'"><div class="stage-emoji">'+stage.emoji+'</div><p class="stage-title">'+stage.title+'</p><p class="stage-desc">'+stage.desc+'</p></div>'+
-    '<div class="dots">'+STAGES.map((s,i)=>'<span class="'+(i===idx?'active':'')+'"></span>').join('')+'</div>'+
+    '<div class="'+dirCls+(locked?' stage-locked':'')+'" data-key="s'+idx+'"><div class="stage-emoji">'+stage.emoji+'</div><p class="stage-title">'+stage.title+'</p>'+badge+'<p class="stage-desc">'+stage.desc+'</p></div>'+
+    '<div class="dots">'+STAGES.map((s,i)=>'<span class="'+(i===idx?'active':'')+(i<cs?' cleared':'')+'"></span>').join('')+'</div>'+
   '</div></div>'+
-  '<div class="card"><div class="card-row"><p class="sec-title">이번 스테이지 진행률</p><span style="color:var(--primary-text);font-weight:800">'+pct+'%</span></div>'+
-    '<div class="progress-track" style="margin-top:10px"><div class="progress-fill" style="width:'+pct+'%"></div></div>'+
-    '<p class="stage-sub" style="margin-top:8px">미션을 완료해 다음 스테이지로 올라가요</p></div>'+
+  '<div class="card"><div class="card-row"><p class="sec-title">이번 스테이지 진행률</p><span style="color:'+(locked?'var(--muted)':'var(--primary-text)')+';font-weight:800">'+(locked?'잠김':pct+'%')+'</span></div>'+
+    '<div class="progress-track" style="margin-top:10px"><div class="progress-fill" style="width:'+(locked?0:pct)+'%"></div></div>'+
+    '<p class="stage-sub" style="margin-top:8px">'+sub+'</p></div>'+
   '<div class="card"><p class="sec-title" style="margin-bottom:6px">개인 미션</p>'+
-    '<div class="'+dirCls+'" data-key="m'+idx+'">'+stage.missions.map(m=>'<div class="mission-row"><div class="mission-check '+(m.done?'done':'todo')+'">'+(m.done?icon('check',15):'')+'</div><div class="mission-text '+(m.done?'done':'')+'">'+m.text+'</div>'+(m.done?'':'<span class="mission-tag">진행 중</span>')+'</div>').join('')+'</div>'+
+    '<div class="'+dirCls+(locked?' missions-locked':'')+'" data-key="m'+idx+'">'+stage.missions.map(m=>{
+      if(locked) return '<div class="mission-row"><div class="mission-check lock">'+icon('lock',13)+'</div><div class="mission-text">'+m.text+'</div><span class="mission-tag lock">잠김</span></div>';
+      return '<div class="mission-row"><div class="mission-check '+(m.done?'done':'todo')+'">'+(m.done?icon('check',15):'')+'</div><div class="mission-text '+(m.done?'done':'')+'">'+m.text+'</div>'+(m.done?'':'<span class="mission-tag">진행 중</span>')+'</div>';
+    }).join('')+'</div>'+
   '</div>'+
   growthCard();
 }
@@ -1320,7 +1424,7 @@ function renderBankFlow(step){
       '<p class="flow-desc">카드나 계좌로 결제한 내역을 불러와 가계부에 바로 적어 줄게요.</p>'+
       '<div class="feat-list">'+
         '<div class="feat-row pop-in"><span class="feat-ic">'+icon('check',20)+'</span><span>결제하면 가계부에 <b>자동 기록</b></span></div>'+
-        '<div class="feat-row pop-in" style="animation-delay:60ms"><span class="feat-ic">'+icon('list',20)+'</span><span>나는 <b>용도만 고르면</b> 소비 돌아보기 끝</span></div>'+
+        '<div class="feat-row pop-in" style="animation-delay:60ms"><span class="feat-ic">'+icon('list',20)+'</span><span>나는 <b>지출 항목만 고르면</b> 소비 돌아보기 끝</span></div>'+
         '<div class="feat-row pop-in" style="animation-delay:120ms"><span class="feat-ic">'+icon('lock',20)+'</span><span><b>조회만</b> 해요. 송금·결제는 할 수 없어요</span></div>'+
       '</div>'+
       '<div class="flow-cta"><button class="primary-btn" data-action="flow-go" data-arg="consent">계좌 연결 시작하기</button>'+
@@ -1392,7 +1496,7 @@ function renderBankFlow(step){
       '<div class="summary pop-in" style="text-align:left;animation-delay:.25s">'+
         '<div class="summary-row"><span>연결 계좌</span><b>'+esc(bankLabel(L.bank))+' ···· '+L.last4+'</b></div>'+
         '<div class="summary-row"><span>불러온 내역</span><b>최근 30일 · 3건</b></div>'+
-        '<div class="summary-row"><span>용도 고르기 남음</span><b class="warn">'+unset+'건</b></div>'+
+        '<div class="summary-row"><span>지출 항목 고르기 남음</span><b class="warn">'+unset+'건</b></div>'+
       '</div>'+
       '<div class="flow-cta"><button class="primary-btn" data-action="finish-link">가계부 보러 가기</button></div>'+
     '</div></div>';
@@ -1469,7 +1573,7 @@ function renderGuide(){
   if(state.guideTab==='ledger'){
     body = '<div class="card"><p class="sec-title">가계부는 이렇게 써요</p>'+
       [['기록하기','계좌 자동 연결, 영수증 찍기, 직접 입력 중 편한 방법을 골라요. 계좌를 연결하면 결제할 때마다 저절로 적혀요.'],
-       ['용도 고르기','식비, 카페, 쇼핑처럼 어디에 쓴 돈인지 골라요. 자동으로 들어온 내역은 용도만 고르면 돼요.'],
+       ['지출 항목 고르기','식비, 카페, 쇼핑처럼 어디에 쓴 돈인지 골라요. 자동으로 들어온 내역은 지출 항목만 고르면 돼요.'],
        ['필요·충동 나누기','밤 10시 돌아보기에서 오늘 산 물건이 꼭 필요했는지, 순간 끌렸는지 골라요.']
       ].map((s,i)=>'<div class="g-step"><span class="g-num">'+(i+1)+'</span><div><p class="g-t">'+s[0]+'</p><p class="g-d">'+s[1]+'</p></div></div>').join('')+'</div>'+
       '<div class="card"><p class="sec-title">기록 예시</p>'+
@@ -1589,7 +1693,7 @@ function currentMetrics(){
 function areaScores(m){
   return {
     use: (m.rec + m.done + m.org)/3,
-    before: m.before*0.6 + (m.depth/3)*0.4,
+    before: m.before*0.6 + (m.depth/4)*0.4,
     after: m.diaryRate*0.5 + (m.rubric/3)*0.5,
     structure: m.plan*0.6 + (1-m.impulse)*0.4
   };
@@ -1644,10 +1748,10 @@ function renderGrowth(){
     ['활용도', [
       ['기록 일수', '기록한 날 ÷ 7일', cur.recCount+'/7일 · '+pct(cur.rec)+'%'],
       ['돌아보기 완료율', '돌아보기 한 날 ÷ 기록한 날', pct(cur.done)+'%'],
-      ['정리율', '용도·필요/충동을 고른 비율', pct(cur.org)+'%']]],
+      ['정리율', '지출 항목·필요/충동을 고른 비율', pct(cur.org)+'%']]],
     ['사기 전 생각', [
       ['작성률', '사기 전 체크가 있는 거래 비율', cur.beforeCount+'/'+cur.txnCount+'건 · '+pct(cur.before)+'%'],
-      ['생각의 깊이', '체크 개수 평균 (0~3)', cur.depth.toFixed(1)+'개'],
+      ['생각의 깊이', '체크 개수 평균 (0~4)', cur.depth.toFixed(1)+'개'],
       ['메모 작성률', '사기 전 메모를 남긴 비율', pct(cur.memo)+'%']]],
     ['산 뒤 성찰', [
       ['일지 작성률', '일지를 쓴 날 ÷ 돌아보기 한 날', pct(cur.diaryRate)+'%'],
@@ -1747,11 +1851,11 @@ function exportCSV(kind){
   const CLS = {need:'필요', impulse:'충동'};
   const SRC = {manual:'직접 입력', receipt:'영수증', auto:'계좌 자동'};
   if(kind==='txn'){
-    const rows = [['학생ID','날짜','물품명','카테고리','세부','금액','기록방식','필요/충동','사기전_꼭필요','사기전_예산안','사기전_중복없음','사기전_메모','계획일치']];
+    const rows = [['학생ID','날짜','물품명','카테고리','세부','금액','기록방식','필요/충동','사기전_꼭필요','사기전_예산안','사기전_중복없음','사기전_일주일뒤','사기전_메모','계획일치']];
     state.transactions.forEach(t=>{
       const b = t.before;
       const plan = b && t.cls ? yn(plannedAs(t)===t.cls) : '';
-      rows.push([sid, '2026-'+t.dateKey, t.name, CATS[t.cat].full, t.sub, Math.abs(t.amount), SRC[t.src]||'', CLS[t.cls]||'미분류', b?yn(b.checks[0]):'', b?yn(b.checks[1]):'', b?yn(b.checks[2]):'', b?b.memo:'', plan]);
+      rows.push([sid, '2026-'+t.dateKey, t.name, CATS[t.cat].full, t.sub, Math.abs(t.amount), SRC[t.src]||'', CLS[t.cls]||'미분류', b?yn(b.checks[0]):'', b?yn(b.checks[1]):'', b?yn(b.checks[2]):'', b?yn(b.checks[3]):'', b?b.memo:'', plan]);
     });
     downloadCSV('직조_거래기록_'+safe+'.csv', rows);
   } else if(kind==='diary'){
@@ -1762,7 +1866,7 @@ function exportCSV(kind){
     });
     downloadCSV('직조_성찰일지_'+safe+'.csv', rows);
   } else {
-    const rows = [['학생ID','주차','기간','데이터','기록일수율(%)','돌아보기완료율(%)','정리율(%)','사기전작성률(%)','생각깊이(0-3)','메모작성률(%)','일지작성률(%)','성찰수준(0-3)','계획일치도(%)','충동소비비율(%)','후회비율(%)','직조지수']];
+    const rows = [['학생ID','주차','기간','데이터','기록일수율(%)','돌아보기완료율(%)','정리율(%)','사기전작성률(%)','생각깊이(0-4)','메모작성률(%)','일지작성률(%)','성찰수준(0-3)','계획일치도(%)','충동소비비율(%)','후회비율(%)','직조지수']];
     allWeeks().forEach(w=>rows.push([sid, w.label, w.range, w.live?'실제':'예시', pct(w.rec), pct(w.done), pct(w.org), pct(w.before), w.depth.toFixed(1), pct(w.memo), pct(w.diaryRate), w.rubric.toFixed(1), pct(w.plan), pct(w.impulse), pct(w.regret), w.index]));
     downloadCSV('직조_주간지표_'+safe+'.csv', rows);
   }
@@ -1806,7 +1910,7 @@ function modalHTML(){
         '<button class="method" data-action="method-manual"><span class="m-ic manual">'+icon('pen',22)+'</span><span class="m-body"><span class="m-title">직접 입력'+recent('manual')+'</span><span class="m-desc" style="display:block">물품과 금액을 직접 적어요</span></span><span class="chevron">'+icon('chevron-right',18)+'</span></button>'+
       '</div>';
   } else if(m==='manual'){
-    inner = '<div class="sheet-head"><h2>소비 추가</h2><button class="close-btn" data-action="close-modal" aria-label="닫기">'+icon('x',16)+'</button></div>'+
+    inner = '<div class="sheet-head"><h2>소비 내역 추가</h2><button class="close-btn" data-action="close-modal" aria-label="닫기">'+icon('x',16)+'</button></div>'+
       '<div class="alt-methods"><span class="am-label">다른 방법으로</span>'+
         '<button class="alt-btn" data-action="method-receipt">'+icon('camera',16)+'영수증 찍기</button>'+
         '<button class="alt-btn" data-action="method-bank">'+icon('bank',16)+(state.linked?'연결 계좌 관리':'계좌 자동 연결')+'</button></div>'+
@@ -1860,15 +1964,206 @@ function morphChildren(a, b){
 }
 function patch(el, html){ const tmp = el.cloneNode(false); tmp.innerHTML = html; morphChildren(el, tmp); }
 
+/* ---------------- LOGIN & TEACHER DASHBOARD ---------------- */
+const PASSWORDS = {learner:'4321', teacher:'1234'};
+const GRADE_LABELS = ['매우 잘함','잘함','보통','미흡','매우 미흡'];
+const GRADE_COLORS = ['var(--primary)','var(--c-food)','var(--c-game)','var(--c-snack)','var(--danger)'];
+const EVAL = {
+  record:{title:'소비 기록 습관', source:'가계부 기록 횟수 · 기록한 날짜 수', meaning:'자신의 소비를 지속적으로 돌아보았는가',
+    levels:['4주 동안 주 6회 이상 꾸준히 기록','4주 동안 주 4회 이상 기록','4주 동안 주 2회 이상 기록','기록이 간헐적임','거의 기록하지 않음']},
+  reflect:{title:'소비 성찰', source:'필요 소비 / 충동 소비 선택 횟수와 비율', meaning:'소비를 필요와 충동으로 구분하고 스스로 점검했는가',
+    levels:['전체 기록의 80% 이상에서 구분하고 꾸준히 점검','60~79%에서 구분하고 자주 점검','40~59%에서 구분하고 간헐적으로 점검','20~39%에서만 구분, 점검이 제한적','20% 미만에서 구분, 성찰 기록이 거의 없음']},
+  challenge:{title:'챌린지 참여', source:'완료한 챌린지(스테이지 미션) 수 · 완료율', meaning:'학습 활동에 꾸준히 참여했는가',
+    levels:['전체 챌린지의 90% 이상 완료','70~89% 완료','50~69% 완료','30~49% 완료','30% 미만 완료']}
+};
+const PROGRAM_WEEKS = [
+  {label:'1주차', dates:['6/22','6/23','6/24','6/25','6/26','6/27','6/28']},
+  {label:'2주차', dates:['6/29','6/30','7/1','7/2','7/3','7/4','7/5']},
+  {label:'3주차', dates:['7/6','7/7','7/8','7/9','7/10','7/11','7/12']},
+  {label:'4주차', dates:['7/13','7/14','7/15','7/16','7/17','7/18','7/19']}
+];
+const EXAMPLE_STUDENTS = [
+  {id:'학생-002', days:[6,6,7,6], txns:[9,10,11,10], cls:[8,9,10,9], early:{need:4,impulse:5}, late:{need:7,impulse:2}, chal:[12,13], visits:31, minutes:342},
+  {id:'학생-003', days:[3,4,4,5], txns:[5,6,6,7], cls:[2,3,4,5], early:{need:1,impulse:1}, late:{need:3,impulse:2}, chal:[8,13], visits:19, minutes:168},
+  {id:'학생-004', days:[2,1,2,1], txns:[3,2,3,1], cls:[0,1,1,0], early:{need:0,impulse:0}, late:{need:0,impulse:0}, chal:[3,13], visits:7, minutes:41},
+  {id:'학생-005', days:[5,6,6,7], txns:[7,9,9,12], cls:[5,7,8,11], early:{need:2,impulse:3}, late:{need:8,impulse:3}, chal:[11,13], visits:26, minutes:254},
+  {id:'학생-006', days:[4,3,2,1], txns:[6,4,3,1], cls:[4,2,1,0], early:{need:2,impulse:2}, late:{need:0,impulse:0}, chal:[5,13], visits:12, minutes:97},
+  {id:'학생-007', days:[6,5,6,6], txns:[8,7,9,8], cls:[4,4,5,5], early:{need:1,impulse:3}, late:{need:3,impulse:2}, chal:[10,13], visits:24, minutes:205},
+  {id:'학생-008', days:[1,0,1,0], txns:[1,0,2,0], cls:[0,0,0,0], early:{need:0,impulse:0}, late:{need:0,impulse:0}, chal:[1,13], visits:3, minutes:12}
+];
+function gradeByRate(p, cuts){ for(let i=0;i<cuts.length;i++) if(p>=cuts[i]) return i; return 4; }
+function accessDates(days){
+  const order = [0,2,4,1,3,5,6];
+  const out = [];
+  days.forEach((n,w)=>{ order.slice(0,n).sort((a,b)=>a-b).forEach(d=>out.push(PROGRAM_WEEKS[w].dates[d])); });
+  return out;
+}
+function liveStudent(){
+  const list = state.transactions;
+  const recDays = new Set(list.map(t=>t.dateKey)).size;
+  const classified = list.filter(t=>t.cls).length;
+  const cs = currentStageIdx();
+  const missions = STAGES.slice(0, cs+1).reduce((a,s)=>a.concat(s.missions), []);
+  const dates = accessDates([4,5,6,recDays]);
+  if(dates[dates.length-1]!=='7/19') dates.push('7/19');
+  const liveMs = state.access.ms + (state.access.since ? Date.now()-state.access.since : 0);
+  return {
+    id:state.studentId.trim() || '학생-001', live:true,
+    days:[4,5,6,recDays], txns:[6,8,9,list.length], cls:[3,5,7,classified],
+    early:{need:1, impulse:2},
+    late:{need:list.filter(t=>t.cls==='need').length, impulse:list.filter(t=>t.cls==='impulse').length},
+    chal:[missions.filter(m=>m.done).length, missions.length],
+    visits:17 + state.access.logins, minutes:196 + Math.round(liveMs/60000), dates
+  };
+}
+function evaluate(s){
+  const dates = s.dates || accessDates(s.days);
+  const avgDays = s.days.reduce((a,b)=>a+b,0)/4;
+  const txnTotal = s.txns.reduce((a,b)=>a+b,0);
+  const clsTotal = s.cls.reduce((a,b)=>a+b,0);
+  const clsRate = txnTotal ? clsTotal/txnTotal : 0;
+  const chalRate = s.chal[1] ? s.chal[0]/s.chal[1] : 0;
+  const imp = o => (o.need+o.impulse) ? o.impulse/(o.need+o.impulse) : null;
+  return Object.assign({}, s, {
+    dates, last:dates[dates.length-1] || '-',
+    avgDays, txnTotal, clsTotal, clsRate, chalRate,
+    earlyImp:imp(s.early), lateImp:imp(s.late),
+    grades:{
+      record: avgDays>=6 ? 0 : avgDays>=4 ? 1 : avgDays>=2 ? 2 : avgDays>=1 ? 3 : 4,
+      reflect: gradeByRate(clsRate, [.8,.6,.4,.2]),
+      challenge: gradeByRate(chalRate, [.9,.7,.5,.3])
+    }
+  });
+}
+function classData(){ return [evaluate(liveStudent())].concat(EXAMPLE_STUDENTS.map(evaluate)); }
+function gradePill(g, short){ return '<span class="gp g'+g+'">'+GRADE_LABELS[g]+'</span>'; }
+function needsCare(s){ return Object.values(s.grades).some(g=>g>=3); }
+function fmtMinutes(m){ const h = Math.floor(m/60); return (h? h+'시간 ' : '')+(m%60)+'분'; }
+function pctOrDash(v){ return v===null ? '-' : Math.round(v*100)+'%'; }
+function logoutBtn(){ return '<button class="icon-btn" data-action="logout" aria-label="로그아웃">'+icon('logout',18)+'</button>'; }
+
+function renderLogin(){
+  const L = state.login;
+  const roles = [{k:'learner', l:'학습자', d:'내 소비 기록하기', ic:'user'},{k:'teacher', l:'교수자', d:'학습자 태도 평가', ic:'users'}];
+  return '<div class="login">'+
+    '<div class="login-top">'+themeBtn()+'</div>'+
+    '<div class="login-brand pop-in"><div class="login-mark">🧶</div><p class="login-name">직조(織造)</p><p class="tagline">나만의 소비 습관을 만들어가다.</p></div>'+
+    '<form class="login-card pop-in" data-form="login" autocomplete="off" style="animation-delay:80ms">'+
+      '<span class="field-label">누구로 들어갈까요?</span>'+
+      '<div class="role-grid" role="radiogroup" aria-label="역할">'+roles.map(r=>'<button type="button" class="role '+(L.role===r.k?'on':'')+'" role="radio" aria-checked="'+(L.role===r.k)+'" data-action="login-role" data-arg="'+r.k+'"><span class="role-ic">'+icon(r.ic,22)+'</span><span class="role-l">'+r.l+'</span><span class="role-d">'+r.d+'</span></button>').join('')+'</div>'+
+      '<label class="field-label" for="login-pw" style="margin-top:20px">'+(L.role==='teacher'?'교수자':'학습자')+' 비밀번호</label>'+
+      '<div class="'+(L.error?'shake':'')+'" data-key="pw'+L.attempt+'"><input id="login-pw" class="text-input pw-input'+(L.error?' err':'')+'" type="password" inputmode="numeric" maxlength="4" placeholder="숫자 4자리" data-input="login-pw" value="'+esc(L.pw)+'" aria-invalid="'+L.error+'"></div>'+
+      (L.error?'<p class="err-text">비밀번호가 맞지 않아요. 다시 입력해 주세요.</p>':'')+
+      '<button type="submit" class="primary-btn" '+(L.pw.length===4?'':'disabled')+'>'+(L.role==='teacher'?'교수자로 로그인':'학습자로 로그인')+'</button>'+
+    '</form>'+
+  '</div>';
+}
+
+function teacherHeader(){
+  return '<div class="header"><div><p class="brand-sm">직조(織造) · 교수자</p><p class="page-title">태도 평가 대시보드</p></div><div class="hdr-actions">'+themeBtn()+logoutBtn()+'</div></div>';
+}
+function renderTeacher(){ return state.teacher.sel ? renderTeacherStudent(state.teacher.sel) : renderTeacherHome(); }
+function renderTeacherHome(){
+  const all = classData();
+  const T = state.teacher;
+  const list = T.filter==='care' ? all.filter(needsCare) : all;
+  const keys = ['record','reflect','challenge'];
+  const dist = k => { const c=[0,0,0,0,0]; all.forEach(s=>c[s.grades[k]]++); return c; };
+  const withEarly = all.filter(s=>s.earlyImp!==null && s.lateImp!==null);
+  const avgE = withEarly.length ? withEarly.reduce((a,s)=>a+s.earlyImp,0)/withEarly.length : 0;
+  const avgL = withEarly.length ? withEarly.reduce((a,s)=>a+s.lateImp,0)/withEarly.length : 0;
+  const care = all.filter(needsCare).length;
+  return teacherHeader()+
+  '<div class="card">'+
+    '<div class="card-row"><span class="week-chip">'+icon('users',14)+'직조 1반 · '+all.length+'명</span><span class="muted-sm">4주 프로그램 · 6/22–7/19</span></div>'+
+    '<p class="t-lead">태도 영역은 학습자 자기평가와 함께, 앱 기록으로 아래 세 가지를 평가해요.</p>'+
+    keys.map(k=>{
+      const c = dist(k);
+      return '<div class="t-dist"><div class="card-row"><span class="t-dist-t">'+EVAL[k].title+'</span><span class="muted-sm">잘함 이상 '+(c[0]+c[1])+'명</span></div>'+
+        '<div class="segbar" style="margin:8px 0 0">'+c.map((n,i)=>'<div style="width:'+(n/all.length*100)+'%;background:'+GRADE_COLORS[i]+'"></div>').join('')+'</div></div>';
+    }).join('')+
+    '<div class="t-legend">'+GRADE_LABELS.map((l,i)=>'<span><i style="background:'+GRADE_COLORS[i]+'"></i>'+l+'</span>').join('')+'</div>'+
+  '</div>'+
+  '<div class="card">'+
+    '<p class="sec-title">반 전체 충동 소비 선택 비율</p>'+
+    '<div class="t-change"><div><span class="muted-sm">프로그램 초기 (1주차)</span><b>'+Math.round(avgE*100)+'%</b></div><span class="t-arrow">'+icon('chevron-right',18)+'</span><div><span class="muted-sm">후기 (4주차)</span><b style="color:'+(avgL<=avgE?'var(--primary-text)':'var(--danger-text)')+'">'+Math.round(avgL*100)+'%</b></div></div>'+
+    '<p class="muted-sm">필요·충동을 고른 학생 '+withEarly.length+'명 기준이에요.</p>'+
+  '</div>'+
+  '<div class="t-filter">'+
+    '<div class="seg" role="tablist" style="margin:0;grid-template-columns:1fr 1fr"><span class="seg-ind" style="width:calc((100% - 8px) / 2);transform:translateX('+(T.filter==='care'?100:0)+'%)"></span>'+
+      '<button role="tab" class="'+(T.filter==='all'?'on':'')+'" aria-selected="'+(T.filter==='all')+'" data-action="teacher-filter" data-arg="all">전체 '+all.length+'</button>'+
+      '<button role="tab" class="'+(T.filter==='care'?'on':'')+'" aria-selected="'+(T.filter==='care')+'" data-action="teacher-filter" data-arg="care">확인 필요 '+care+'</button></div>'+
+  '</div>'+
+  '<div class="t-list" data-key="tl-'+T.filter+'">'+(list.length ? list.map((s,i)=>
+    '<button class="t-row pop-in" style="animation-delay:'+(i*35)+'ms" data-action="teacher-open" data-arg="'+esc(s.id)+'">'+
+      '<div class="t-row-top"><span class="t-id">'+esc(s.id)+(s.live?'<span class="live-tag">이 기기 기록</span>':'')+'</span><span class="muted-sm">마지막 접속 '+s.last+'</span></div>'+
+      '<div class="t-grades">'+keys.map(k=>'<div><span class="t-g-l">'+EVAL[k].title+'</span>'+gradePill(s.grades[k])+'</div>').join('')+'</div>'+
+    '</button>').join('') : '<p class="muted-sm" style="padding:20px;text-align:center">확인이 필요한 학생이 없어요.</p>')+'</div>'+
+  '<div style="margin:16px"><button class="outline-btn" style="border-style:solid;border-color:var(--border)" data-action="teacher-csv">'+icon('list',18)+'반 전체 평가 결과 CSV</button></div>'+
+  '<p class="disclaimer">'+esc(all[0].id)+'는 이 기기에서 기록한 내용으로 계산하고, 나머지 학생과 1~3주차는 예시 데이터예요.<br>“확인 필요”는 미흡 이하 항목이 하나라도 있는 학생이에요.</p>'+
+  '<div style="height:28px"></div>';
+}
+function renderTeacherStudent(id){
+  const s = classData().find(x=>x.id===id);
+  if(!s){ state.teacher.sel = null; return renderTeacherHome(); }
+  const memo = state.teacher.memo[id] || '';
+  const weekBars = (vals, max, fmtV) => '<div class="t-weeks">'+vals.map((v,i)=>'<div class="tw"><span class="tw-v">'+fmtV(v,i)+'</span><i style="height:'+Math.max(3,Math.round(v/max*56))+'px;animation-delay:'+(i*50)+'ms"></i><span class="tw-l">'+PROGRAM_WEEKS[i].label+'</span></div>').join('')+'</div>';
+  const clsRates = s.txns.map((t,i)=>t? s.cls[i]/t : 0);
+  const blocks = [
+    ['record', '주 평균 '+s.avgDays.toFixed(1)+'일 기록', '4주간 '+s.days.reduce((a,b)=>a+b,0)+'일 · 소비 기록 '+s.txnTotal+'건', weekBars(s.days, 7, v=>v+'일')],
+    ['reflect', '필요·충동 구분 '+Math.round(s.clsRate*100)+'%', '전체 기록 '+s.txnTotal+'건 중 '+s.clsTotal+'건 구분', weekBars(clsRates, 1, v=>Math.round(v*100)+'%')],
+    ['challenge', '챌린지 '+Math.round(s.chalRate*100)+'% 완료', s.chal[0]+'개 완료 / 전체 '+s.chal[1]+'개', '<div class="progress-track" style="margin:14px 0 0"><div class="progress-fill" style="width:'+Math.round(s.chalRate*100)+'%"></div></div>']
+  ];
+  const split = o => { const t=o.need+o.impulse; return t ? '<div class="segbar" style="margin:6px 0 0"><div style="width:'+(o.need/t*100)+'%;background:var(--primary)"></div><div style="width:'+(o.impulse/t*100)+'%;background:var(--danger)"></div></div>' : '<div class="segbar" style="margin:6px 0 0"></div>'; };
+  return '<div class="appbar"><button class="icon-btn ghost" data-action="teacher-back" aria-label="학생 목록으로">'+icon('chevron-left',24)+'</button><div class="appbar-title">'+esc(s.id)+(s.live?' · 이 기기 기록':'')+'</div><div class="appbar-right"></div></div>'+
+  '<div class="card" style="margin-top:6px"><p class="sec-title" style="margin-bottom:12px">태도 영역 평가</p>'+
+    Object.keys(EVAL).map(k=>'<div class="gr-row"><div class="gr-name">'+EVAL[k].title+'</div>'+gradePill(s.grades[k])+'</div>').join('')+
+  '</div>'+
+  blocks.map(b=>{
+    const E = EVAL[b[0]], g = s.grades[b[0]];
+    return '<div class="card"><div class="card-row"><p class="sec-title">'+E.title+'</p>'+gradePill(g)+'</div>'+
+      '<p class="muted-sm" style="margin-top:4px">'+E.meaning+'</p>'+
+      '<p class="t-metric">'+b[1]+'</p><p class="muted-sm">'+b[2]+' · 근거: '+E.source+'</p>'+b[3]+
+      '<div class="t-scale">'+E.levels.map((l,i)=>'<div class="t-level'+(i===g?' on g'+i:'')+'"><span class="t-lv-n">'+GRADE_LABELS[i]+'</span><span class="t-lv-t">'+l+'</span></div>').join('')+'</div>'+
+    '</div>';
+  }).join('')+
+  '<div class="section-label">교사가 추가로 확인할 내용</div>'+
+  '<div class="card" style="margin-top:0">'+
+    '<div class="gr-row"><div class="gr-name">앱 접속 횟수</div><div class="gr-val">'+s.visits+'회</div></div>'+
+    '<div class="gr-row"><div class="gr-name">총 접속 시간</div><div class="gr-val">'+fmtMinutes(s.minutes)+'</div></div>'+
+    '<div class="gr-row"><div class="gr-name">소비 기록 횟수</div><div class="gr-val">'+s.txnTotal+'건</div></div>'+
+    '<div class="gr-row"><div class="gr-name">필요 / 충동 선택</div><div class="gr-val">'+(s.early.need+s.late.need)+' / '+(s.early.impulse+s.late.impulse)+'회 <span class="muted-sm">(1·4주차)</span></div></div>'+
+    '<div class="t-dates"><span class="gr-name">접속 날짜 '+s.dates.length+'일</span><div class="t-date-chips">'+(s.dates.length? s.dates.map(d=>'<span>'+d+'</span>').join('') : '<span>접속 기록 없음</span>')+'</div></div>'+
+  '</div>'+
+  '<div class="card"><p class="sec-title">초기 · 후기 필요/충동 선택 비율</p>'+
+    '<div class="t-pp"><div class="card-row"><span class="muted-sm">초기 (1주차)</span><b>충동 '+pctOrDash(s.earlyImp)+'</b></div>'+split(s.early)+'</div>'+
+    '<div class="t-pp"><div class="card-row"><span class="muted-sm">후기 (4주차)</span><b>충동 '+pctOrDash(s.lateImp)+'</b></div>'+split(s.late)+'</div>'+
+    '<div class="t-legend" style="margin-top:12px"><span><i style="background:var(--primary)"></i>필요 소비</span><span><i style="background:var(--danger)"></i>충동 소비</span></div>'+
+    (s.earlyImp!==null && s.lateImp!==null ? '<p class="t-verdict" style="color:'+(s.lateImp<=s.earlyImp?'var(--primary-text)':'var(--danger-text)')+'">충동 소비 선택이 '+Math.abs(Math.round((s.lateImp-s.earlyImp)*100))+'%p '+(s.lateImp<=s.earlyImp?'줄었어요':'늘었어요')+'</p>' : '<p class="muted-sm" style="margin-top:10px">비교할 기록이 부족해요.</p>')+
+  '</div>'+
+  '<div class="card"><label class="sec-title" for="t-memo" style="display:block">교사 관찰 메모</label><p class="muted-sm" style="margin:4px 0 10px">수업 중 관찰한 내용과 자기평가 결과를 함께 적어 두세요.</p>'+
+    '<textarea id="t-memo" class="text-input" style="min-height:96px;font-size:14.5px" placeholder="예: 소비 전 체크리스트를 꾸준히 사용함" data-input="teacher-memo">'+esc(memo)+'</textarea></div>'+
+  '<div style="height:28px"></div>';
+}
+function exportClassCSV(){
+  const rows = [['학생ID','주평균기록일수','소비기록습관','필요충동구분률(%)','소비성찰','챌린지완료율(%)','챌린지참여','앱접속횟수','접속일수','총접속시간(분)','소비기록횟수','초기충동비율(%)','후기충동비율(%)','교사메모','데이터']];
+  classData().forEach(s=>rows.push([s.id, s.avgDays.toFixed(1), GRADE_LABELS[s.grades.record], Math.round(s.clsRate*100), GRADE_LABELS[s.grades.reflect], Math.round(s.chalRate*100), GRADE_LABELS[s.grades.challenge], s.visits, s.dates.length, s.minutes, s.txnTotal, s.earlyImp===null?'':Math.round(s.earlyImp*100), s.lateImp===null?'':Math.round(s.lateImp*100), state.teacher.memo[s.id]||'', s.live?'실제':'예시']));
+  downloadCSV('직조_태도평가_직조1반.csv', rows);
+}
+
 /* ---------------- MASTER RENDER ---------------- */
 let lastKey = null, navDir = null, focusSel = null;
 const scrollMemo = {};
 function screenKey(){
+  if(!state.role) return 'login';
+  if(state.role==='teacher') return 'teacher:'+(state.teacher.sel||'list');
   if(state.flow) return 'flow:'+state.flow.type+':'+(state.flow.step||'');
   if(state.diagView) return 'diag:'+state.diagView;
   return state.tab + (state.tab==='reflect' ? ':'+state.reflectView : '');
 }
 function screenHTML(){
+  if(!state.role) return renderLogin();
+  if(state.role==='teacher') return renderTeacher();
   const F = state.flow;
   if(F){
     if(F.type==='bank') return renderBankFlow(F.step);
@@ -1903,7 +2198,7 @@ function render(){
     patch(view, html);
   }
   navDir = null;
-  document.getElementById('root').classList.toggle('no-nav', !!state.flow);
+  document.getElementById('root').classList.toggle('no-nav', !!state.flow || state.role!=='learner');
   if(!(glassDrag && glassDrag.kind==='nav')) patch(document.getElementById('nav-root'), renderNav());
   patch(document.getElementById('fab-root'), renderFab());
 
@@ -1945,7 +2240,7 @@ function showToast(msg){
 /* ---------------- NAVIGATION HELPERS ---------------- */
 function goTab(tab){
   state.tab = tab; state.reflectView='list'; state.diagView=null; state.flow=null; state.flowReturn=null;
-  state.stageView = state.currentStage;
+  state.stageView = currentStageIdx();
   navDir = 'fade';
 }
 function startFlow(type, step){
@@ -1987,8 +2282,8 @@ function startVerifyTimer(){
 function importAutoTxns(){
   if(state.imported) return;
   const add = [
-    {dateKey:'07-19', name:'온라인 쇼핑몰', cat:'unset', sub:'용도 선택 필요', amount:-12900, meta:'오후 4:12 · 체크카드'},
-    {dateKey:'07-19', name:'편의점', cat:'unset', sub:'용도 선택 필요', amount:-2300, meta:'오전 11:05 · 체크카드'},
+    {dateKey:'07-19', name:'온라인 쇼핑몰', cat:'unset', sub:'지출 항목 선택 필요', amount:-12900, meta:'오후 4:12 · 체크카드'},
+    {dateKey:'07-19', name:'편의점', cat:'unset', sub:'지출 항목 선택 필요', amount:-2300, meta:'오전 11:05 · 체크카드'},
     {dateKey:'07-18', name:'PC방', cat:'game', sub:'게임', amount:-3000, meta:'오후 5:40 · 체크카드'}
   ];
   add.forEach(a=>{ txnSeq++; state.transactions.unshift(Object.assign({id:txnSeq, cls:null, src:'auto'}, a)); });
@@ -2118,7 +2413,7 @@ const ACTIONS = {
     if(state.guideTab==='after'){ state.flow=null; state.flowReturn=null; goTab('reflect'); state.reflectView = todaysTxns().length ? 'form' : 'list'; }
     else { closeFlow(); state.modal='method'; }
   },
-  'open-ai'(){ startFlow('ai'); },
+  'open-ai'(){ startFlow('ai'); const m = completeMission('pattern'); if(m) setTimeout(()=>showToast(m),350); },
   'ai-rerun'(){ runAI(); return 'rendered'; },
   'ai-challenge'(){ state.ai.challenge=!state.ai.challenge; if(state.ai.challenge) setTimeout(()=>showToast('챌린지를 시작했어요'),0); },
   'go-reflect'(){ state.flow=null; state.flowReturn=null; goTab('reflect'); },
@@ -2141,11 +2436,22 @@ const ACTIONS = {
   'complete-reflect'(){
     const today = todaysTxns();
     if(!state.mood || !today.every(t=>t.cls)) return;
-    STAGES[1].missions[2].done = true;
     state.reflections = state.reflections.filter(r=>r.dateKey!==TODAY_KEY).concat([{dateKey:TODAY_KEY, mood:state.mood, diary:state.diaryText.trim()}]);
-    setTimeout(()=>showToast('오늘의 소비 돌아보기가 저장되었어요'),0);
+    const msg = (today.some(t=>t.cls==='impulse') && state.diaryText.trim()) ? completeMission('impulseDiary') : null;
+    setTimeout(()=>showToast(msg || '오늘의 소비 돌아보기가 저장되었어요'),0);
   },
-  'open-growth'(){ startFlow('growth'); },
+  'login-role'(el){ state.login.role = el.dataset.arg; state.login.pw=''; state.login.error=false; focusSel='#login-pw'; },
+  'logout'(){
+    if(state.role==='learner' && state.access.since){ state.access.ms += Date.now()-state.access.since; state.access.since=null; }
+    state.role=null; state.modal=null; state.flow=null; state.flowReturn=null; state.diagView=null; state.teacher.sel=null;
+    state.login={role:state.login.role, pw:'', error:false, attempt:state.login.attempt}; navDir='fade';
+    setTimeout(()=>showToast('로그아웃했어요'),0);
+  },
+  'teacher-open'(el){ state.teacher.sel = el.dataset.arg; navDir='push'; },
+  'teacher-back'(){ state.teacher.sel = null; navDir='pop'; },
+  'teacher-filter'(el){ state.teacher.filter = el.dataset.arg; },
+  'teacher-csv'(){ exportClassCSV(); setTimeout(()=>showToast('CSV 파일을 저장했어요'),0); },
+  'open-growth'(){ startFlow('growth'); const m = completeMission('pattern'); if(m) setTimeout(()=>showToast(m),350); },
   'growth-metric'(el){ state.growthMetric = el.dataset.arg; },
   'csv'(el){ exportCSV(el.dataset.arg); setTimeout(()=>showToast('CSV 파일을 저장했어요'),0); },
   'go-diagnosis'(){ state.flow=null; state.flowReturn=null; state.tab='home'; state.quizAnswers={}; state.quizIndex=0; state.diagnosis=null; state.diagView='intro'; navDir='push'; },
@@ -2247,6 +2553,19 @@ document.addEventListener('click', function(e){
   if(likert){ state.quizAnswers[state.quizIndex] = Number(likert.dataset.answer); render(); return; }
 });
 
+function doLogin(){
+  const L = state.login;
+  if(L.pw.length!==4) return;
+  if(L.pw!==PASSWORDS[L.role]){ L.error=true; L.attempt++; L.pw=''; focusSel='#login-pw'; render(); return; }
+  state.role = L.role; L.pw=''; L.error=false;
+  if(L.role==='learner'){ state.access.logins++; state.access.since=Date.now(); goTab('home'); }
+  else { state.teacher.sel=null; navDir='fade'; }
+  render();
+  setTimeout(()=>showToast(L.role==='teacher'?'교수자로 로그인했어요':'학습자로 로그인했어요'), 0);
+}
+document.addEventListener('submit', function(e){
+  if(e.target.matches('[data-form="login"]')){ e.preventDefault(); doLogin(); }
+});
 document.addEventListener('input', function(e){
   const el = e.target; const k = el.dataset && el.dataset.input;
   if(!k || k==='receipt-file') return;
@@ -2258,6 +2577,8 @@ document.addEventListener('input', function(e){
   else if(k==='acct'){ el.value = el.value.replace(/\D/g,'').slice(0,14); state.acct.number = el.value; }
   else if(k==='owner') state.acct.owner = el.value;
   else if(k==='student-id') state.studentId = el.value.slice(0,20);
+  else if(k==='login-pw'){ el.value = el.value.replace(/\D/g,'').slice(0,4); state.login.pw = el.value; state.login.error = false; }
+  else if(k==='teacher-memo') state.teacher.memo[state.teacher.sel] = el.value;
   else if(k==='digit'){
     const i = +el.dataset.i;
     const v = el.value.replace(/\D/g,'').slice(-1);
